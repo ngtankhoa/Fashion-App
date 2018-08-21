@@ -1,0 +1,172 @@
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/* @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+} */
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+/* @media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} */
+
+/* CSS for testing purpose */
+.test1 {
+    border: 1px solid greenyellow;
+}
+
+.test2 {
+    border: 1px solid blueviolet;
+}
+
+.test3 {
+    border: 1px solid lightsalmon;
+}
+
+/* sidebar CSS */
+.sidenav {
+  height: 100%;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidenav .closebtn
+{
+  position: absolute;
+  top:0;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+/* style the page content */
+#main {
+  transition: margin-right .5s;
+}
+
+/* slider */
+#slider {
+  width: 700px;
+  overflow: hidden;
+}
+
+#slider .slides {
+  width: 700px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  /* flex-direction: row; */
+}
+
+#slider .slide {
+  width: 700px;
+  height: 450px;
+  position: relative;
+}
+
+.model {
+  /* temp height 450px */
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: -1;
+}
+
+.accessory {
+  position: absolute;
+  width: 60px;
+  height:auto;
+}
+
+/* position icon on each slides */
+#icon1-1 {
+  top:10%;
+  right: 10%;
+}
+
+#icon1-2 {
+  top:15%;
+  left:10%;
+}
+
+#icon2-1 {
+  top:20%;
+  right: 10%;
+}
+
+#icon3-1 {
+  top:50%;
+  left:10%;
+}
+
+#icon3-2 {
+  top:50%;
+  right:10%;
+}
+
+#icon4-1 {
+  top:60%;
+  left:10%;
+}
+
+
+/* thumbnail */
+#thumbnail {
+  /* temporary set height to 300px and width 60px */
+  height: 250px;
+  width: 60px;
+  overflow: hidden;
+}
+
+#thumbnail .thumbs {
+  display: block;
+  width: auto;
+  /* temp height 300px */
+  height: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+#thumbnail .thumb {
+  /* temp height 60px */
+  height: 60px;
+  width: 60px;
+  margin-top: 6px;
+  position: relative;
+  cursor: pointer;  
+
+}
+
+#thumbnail img {
+  height:60px;
+}
+
+/* .model {
+  height: 450px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+} */
+
+/* .accessory {
+  position: absolute;
+  width: 60px;
+  height:auto;
+} */

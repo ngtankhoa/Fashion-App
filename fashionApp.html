@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="myStyle.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Fashion App</title>
+</head>
+
+<body>
+    <!-- sidenav -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <h5>THÔNG TIN SẢN PHẨM</h5>
+            <div class="row">
+                <div class="col-4">
+
+                </div>
+                <div class="col-8">
+
+                </div>
+            </div>
+
+            <h5>KHUYẾN MÃI</h5>
+            <div class="row">
+                <div class="col-8">
+
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+
+            <h5>CHỈ ĐƯỜNG</h5>
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- content -->
+    <div id="main" class="container test1">
+        <div class="row">
+            <!-- thumbnail -->
+            <div id="thumbnail" class="col-3">
+                <div class="thumbs">
+                    <div class="thumb" onclick="current(1)">
+                        <img src="img/slider1.png" alt="thumb1" class="img-fluid">
+                    </div>
+                    <div class="thumb" onclick="current(2)">
+                        <img src="img/slider2.png" alt="thumb2" class="img-fluid">
+                    </div>
+                    <div class="thumb" onclick="current(3)">
+                        <img src="img/slider3.png" alt="thumb3" class="img-fluid">
+                    </div>
+                    <div class="thumb" onclick="current(4)">
+                        <img src="img/slider4.png" alt="thumb4" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- slider -->
+            <div id="slider" class="col-9 test2">
+                <!-- <ul class="slides">
+                    <li class="slide"> <img src="img/model.png" alt="model"> </li>
+                    <li class="slide"> <img src="img/model2.png" alt="model2"> </li>
+                    <li class="slide"> <img src="img/model3.png" alt="model3"> </li>
+                    <li class="slide"> <img src="img/model4.png" alt="model4"> </li>
+                    <li class="slide"> <img src="img/model.png" alt="model"> </li>
+                </ul> -->
+                <div class="slides">
+                    <div class="slide">
+                        <img class="model" src="img/model.png" alt="model">
+                        <img src="img/non.png" alt="non" class="accessory" id="icon1-1" onclick="openNav()">
+                    </div>
+                    <div class="slide">
+                        <img class="model" src="img/model2.png" alt="model2">
+                        <img src="img/giay.png" alt="giay" class="accessory" id="icon2-1" onclick="openNav()">
+                    </div>
+                    <div class="slide">
+                        <img class="model" src="img/model3.png" alt="mode3">
+                        <img src="img/tuixach.png" alt="tuixach" class="accessory" id="icon3-1" onclick="openNav()">
+                    </div>
+                    <div class="slide">
+                        <img class="model" src="img/model4.png" alt="model4">
+                        <img src="img/giay.png" alt="giay" class="accessory" id="icon4-1" onclick="openNav()">
+                    </div>
+                    <div class="slide">
+                        <img class="model" src="img/model.png" alt="model">
+                        <img src="img/non.png" alt="non" class="accessory" id="icon1-1" onclick="openNav()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <script src="myScript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
