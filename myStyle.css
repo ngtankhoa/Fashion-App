@@ -30,6 +30,10 @@
     border: 1px solid lightsalmon;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* sidebar CSS */
 .sidenav {
   height: 100%;
@@ -58,39 +62,45 @@
   transition: margin-right .5s;
 }
 
-/* slider */
+.slide {
+  display: none;
+}
+
+/* img {
+  vertical-align: middle;
+} */
+
 #slider {
-  width: 700px;
-  overflow: hidden;
-}
-
-#slider .slides {
-  width: 700px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  overflow: hidden;
-  /* flex-direction: row; */
-}
-
-#slider .slide {
-  width: 700px;
-  height: 450px;
+  max-width: 700px;
   position: relative;
+  margin: auto;
 }
+
+/* fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: .1}
+}
+
+
 
 .model {
-  /* temp height 450px */
-  width: 100%;
-  height: auto;
-  display: block;
   z-index: -1;
 }
 
 .accessory {
-  position: absolute;
-  width: 60px;
-  height:auto;
 }
 
 /* position icon on each slides */
@@ -155,18 +165,3 @@
 #thumbnail img {
   height:60px;
 }
-
-/* .model {
-  height: 450px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: -1;
-} */
-
-/* .accessory {
-  position: absolute;
-  width: 60px;
-  height:auto;
-} */
