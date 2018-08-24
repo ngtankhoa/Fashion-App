@@ -8,13 +8,13 @@ function closeNav() {
     document.getElementById("main").style.marginRight = "0";
 }
 
+var slides = document.getElementsByClassName("mySlides");
 var slideIndex = 0;
-showSlides();
+var i;
+var interval;
+var timeout;
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-
+function immediatelyShowSlides() {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -22,5 +22,28 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }
 
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
 }
+
+function showSlides(n) {
+    slideIndex = n;
+    immediatelyShowSlides();
+    interval = setInterval(immediatelyShowSlides, 3000);
+}
+
+function thumb_showSlides(n) {
+    clearInterval(interval);
+    clearTimeout(timeout);
+    showSlides(n);
+}
+
+// bat su kien mouseenter va mouseleave
+document.getElementById("slider").onmouseenter = function () {
+    clearInterval(interval);
+    clearTimeout(timeout);
+};
+
+document.getElementById("slider").onmouseleave = function () {
+    timeout = setTimeout(showSlides, 3000, slideIndex);
+};
+
+showSlides(0);
