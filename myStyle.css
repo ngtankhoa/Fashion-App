@@ -75,6 +75,7 @@
   display: none;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 /* img {
@@ -89,7 +90,7 @@
 }
 
 /* fading animation */
-.fade {
+/* .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
   animation-name: fade;
@@ -104,7 +105,7 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
+} */
 
 
 
@@ -122,6 +123,8 @@
 }
 
 .accessory {
+  position: absolute;
+  width: 80px;
 }
 
 /* position icon on each slides */
@@ -160,17 +163,22 @@
 #thumbnail {
   /* temporary set height to 300px and width 60px */
   height: 250px;
-  width: 60px;
-  overflow: hidden;
+  /* width: 60px; */
+  overflow-y: scroll;
+}
+
+/* make scrollbar invisible */
+::-webkit-scrollbar {
+  display:none;
 }
 
 #thumbnail .thumbs {
   display: block;
-  width: auto;
+  /* width: 50%; */
   /* temp height 300px */
-  height: 250px;
-  margin: 0;
-  padding: 0;
+  /* height: 250px; */
+  /* margin: 0px; */
+  /* padding: 0; */
 }
 
 #thumbnail .thumb {
