@@ -1,86 +1,52 @@
-var slides = document.getElementsByClassName("mySlides");
-var slideIndex = 0;
-var i, interval, timeoutSlider, timeoutSidenav;
-var sideNavOpen = 'false';
-var thumbContainer = document.getElementById("thumbnail");
-var thumbHeight = document.getElementsByClassName("thumb")[1];
-thumbHeight = thumbHeight.scrollHeight + 6; //temporary know that margin top is 6px
-window.scrollBy(60, 60);
+$(document).ready(function () {
+    var $slides = $(".mySlides");
+    var slideshowContainer = $(".slideshow-container");
+    var slideIndex = 0, timeoutSlider, timeoutSidenav;
+    var sideNavOpen = 'false';
+    var sliderPauseTime = 3000, pauseTimeSideNav = 10000;
 
-function openNav() {
-    sideNavOpen = 'true';
-    clearTimeout(timeoutSidenav);
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginRight = "250px";
-    pauseSlider();
-    timeoutSidenav = setTimeout(closeNav, 10000);
-}
+    var thumbContainer = $("#thumbnail");
+    var thumbHeight = document.getElementsByClassName("thumb")[1];
+    thumbHeight = thumbHeight.scrollHeight + 6; //tạm cho biết trước margin-top = 6px
 
-function closeNav() {
-    sideNavOpen = 'false';
-    resumeSlider();
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight = "auto";
-}
-
-// for arrow pointer
-function plusSlides() {
-    showSlides(slideIndex);
-}
-
-function subSlides() {
-    slideIndex--;
-    showSlides(slideIndex);
-}
-
-function immediatelyShowSlides() {
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    function openNav() {
+        sideNavOpen = 'true';
+        clearTimeout(timeoutSidenav);
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginRight = "250px";
+        timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
 
-    slides[slideIndex - 1].style.display = "block";
-}
+    function closeNav() {
+        sideNavOpen = 'false';
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginRight = "auto";
+        resumeSlider();
+    }
 
-function scrollThumbnail() {
-    thumbContainer.scrollTop = thumbHeight;
-}
+    function showSlides(n) {
+        slideIndex = n;
+        $slides.css("display", "none");
+        $slides.eq(slideIndex).css("display", "block");
+        if (slideIndex < $slides.length - 1) { slideIndex++; } //độ dài của $slides là 4
+        else { slideIndex = 0; }
+        timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
+    }
 
-function showSlides(n) {
-    slideIndex = n;
-    immediatelyShowSlides();
-    interval = setInterval(function () {
-        immediatelyShowSlides();
-        scrollThumbnail();
-    }, 3000);
-}
+    function pauseSlider() {
+        clearTimeout(timeoutSlider);
+        console.log("pause");
+    }
 
-function thumb_showSlides(n) {
-    clearInterval(interval);
-    clearTimeout(timeoutSlider);
-    showSlides(n);
-}
+    function resumeSlider() {
+        if (sideNavOpen === 'false')
+            timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
+        console.log("resume");
+    }
 
-function resumeSlider() {
-    timeoutSlider = setTimeout(showSlides, 3000, slideIndex);
-    console.log("resume");
-};
+    //bắt sự kiện mouseenter và mouseleave để quản lí slider
+    slideshowContainer.mouseenter(function () { pauseSlider(); }).mouseleave(function () { resumeSlider(); });
 
-function pauseSlider() {
-    clearInterval(interval);
-    clearTimeout(timeoutSlider);
-    console.log("pause");
-};
-
-// bat su kien mouseenter va mouseleave
-document.getElementById("slider").onmouseenter = pauseSlider;
-
-document.getElementById("slider").onmouseleave = function(){
-    if (sideNavOpen==='false') resumeSlider();
-};
-
-showSlides(0);
-
-//hoc jQuery de lam animation cho scroll
-//them noi dung vao bang json
+    //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
+    showSlides(0);
+});

@@ -1,0 +1,22 @@
+{
+    "en": {
+        "productInfo": "PRODUCT INFORMATION",
+        "productImg": "product image URL",
+        "productDetail": "this is the detail for product image. this is detail for product image, this is details for product image",
+        "promotion": "PROMOTION",
+        "promotionDetail": "this is the detail for promotion",
+        "barcode": "barcode URL",
+        "direction": "DIRECTION",
+        "directionDetail": "direction image URL"
+    },
+    "vi": {
+        "productInfo": "THÔNG TIN SẢN PHẨM",
+        "productImg": "URL hình ảnh sản phẩm",
+        "productDetail": "đây là nơi chứa thông tin chi tiết của sản phẩm, đây là nơi chứa thông tin chi tiết của sản phẩm",
+        "promotion": "KHUYẾN MÃI",
+        "promotionDetail": "đây là nơi chứa thông tin chi tiết của khuyến mãi",
+        "barcode": "URL hình ảnh barcode",
+        "direction": "CHỈ ĐƯỜNG",
+        "directionDetail": "URL hình ảnh chỉ đường"
+    }
+}

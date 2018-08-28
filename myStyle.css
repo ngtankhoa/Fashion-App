@@ -1,22 +1,3 @@
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-/* @media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-} */
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-/* @media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-} */
-
 /* CSS for testing purpose */
 .test1 {
     border: 1px solid greenyellow;
@@ -78,36 +59,24 @@
   position: relative;
 }
 
-/* img {
-  vertical-align: middle;
-} */
-
 .slideshow-container {
   /* temporary set to pixel */
   height: 500px;
   position: relative;
   margin: auto;
+  left: 0px;
 }
 
-/* fading animation */
-/* .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 50px;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.next {
+  right: 0px;
 }
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-} */
-
-
 
 .model {
   /* model behind icon */
@@ -192,4 +161,9 @@
 
 #thumbnail img {
   height:60px;
+}
+
+.language {
+  position: absolute;
+  bottom: 10px;
 }

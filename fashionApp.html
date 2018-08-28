@@ -21,29 +21,29 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="container">
-            <h5>THÔNG TIN SẢN PHẨM</h5>
+            <h5 id="productInfo">THÔNG TIN SẢN PHẨM</h5>
             <div class="row">
-                <div class="col-4">
+                <div id="productImg" class="col-4">
                     product image
                 </div>
-                <div class="col-8">
+                <div id="productDetail" class="col-8">
                     details for product
                 </div>
             </div>
 
-            <h5>KHUYẾN MÃI</h5>
+            <h5 id="promotion">KHUYẾN MÃI</h5>
             <div class="row">
-                <div class="col-8">
+                <div id="promotionDetail" class="col-8">
                     details for promotion
                 </div>
-                <div class="col-4">
+                <div id="barcode" class="col-4">
                     barcode
                 </div>
             </div>
 
-            <h5>CHỈ ĐƯỜNG</h5>
+            <h5 id="direction">CHỈ ĐƯỜNG</h5>
             <div class="row">
-                <div class="col">
+                <div id="directionDetail" class="col">
                     details for direction
                 </div>
             </div>
@@ -58,27 +58,32 @@
         <div id="main" class="container test1">
             <div class="row">
                 <!-- thumbnail -->
-                <div id="thumbnail" class="d-none d-sm-block col-sm-2 test3">
-                    <div class="thumbs">
-                        <div class="thumb">
-                            <img src="img/slider1.png" alt="thumb1" class="img-fluid" onclick="thumb_showSlides(0)">
+                <div class="d-none d-sm-block col-sm-2 test3">
+                    <div id="thumbnail">
+                        <div class="thumbs">
+                            <div class="thumb">
+                                <img src="img/slider1.png" alt="thumb1" class="img-fluid" onclick="thumb_showSlides(0)">
+                            </div>
+                            <div class="thumb">
+                                <img src="img/slider2.png" alt="thumb2" class="img-fluid" onclick="thumb_showSlides(1)">
+                            </div>
+                            <div class="thumb">
+                                <img src="img/slider3.png" alt="thumb3" class="img-fluid" onclick="thumb_showSlides(2)">
+                            </div>
+                            <div class="thumb">
+                                <img src="img/slider4.png" alt="thumb4" class="img-fluid" onclick="thumb_showSlides(3)">
+                            </div>
                         </div>
-                        <div class="thumb">
-                            <img src="img/slider2.png" alt="thumb2" class="img-fluid" onclick="thumb_showSlides(1)">
-                        </div>
-                        <div class="thumb">
-                            <img src="img/slider3.png" alt="thumb3" class="img-fluid" onclick="thumb_showSlides(2)">
-                        </div>
-                        <div class="thumb">
-                            <img src="img/slider4.png" alt="thumb4" class="img-fluid" onclick="thumb_showSlides(3)">
-                        </div>
+                    </div>
+                    <div class="language">
+                        <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('vi')">Tiếng Việt</button>
+                        <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('en')">English</button>
                     </div>
                 </div>
 
                 <!-- slider -->
                 <div class="col-sm-10 test2">
                     <div id="slider" class="slideshow-container">
-
                         <div class="mySlides">
                             <img class="model" src="img/model.png" alt="model">
                             <p>1/4</p>
@@ -103,6 +108,8 @@
                             <img src="img/giay.png" alt="giay" class="accessory" id="icon4-1" onclick="openNav()">
                         </div>
 
+                        <a class="prev d-block d-sm-none" onclick="subSlides()">&#10094;</a>
+                        <a class="next d-block d-sm-none" onclick="plusSlides()">&#10095;</a>
                     </div>
                 </div>
             </div>
