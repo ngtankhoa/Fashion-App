@@ -132,7 +132,7 @@
 #thumbnail {
   /* temporary set height to 300px and width 60px */
   height: 250px;
-  /* width: 60px; */
+  max-width: 60px;
   overflow-y: scroll;
 }
 
@@ -150,17 +150,11 @@
   /* padding: 0; */
 }
 
-#thumbnail .thumb {
-  /* temp height 60px */
-  height: 60px;
-  width: 60px;
-  margin-top: 6px;
-  position: relative;
-  cursor: pointer;  
-}
+
 
 #thumbnail img {
-  height:60px;
+  cursor: pointer;
+  margin-top: 6px;
 }
 
 .language {

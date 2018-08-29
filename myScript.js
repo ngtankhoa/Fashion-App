@@ -4,10 +4,8 @@ $(document).ready(function () {
     var slideIndex = 0, timeoutSlider, timeoutSidenav;
     var sideNavOpen = 'false';
     var sliderPauseTime = 3000, pauseTimeSideNav = 10000;
-
+    var closeBtn = $(".closebtn");
     var thumbContainer = $("#thumbnail");
-    var thumbHeight = document.getElementsByClassName("thumb")[1];
-    thumbHeight = thumbHeight.scrollHeight + 6; //tạm cho biết trước margin-top = 6px
 
     function openNav() {
         sideNavOpen = 'true';
@@ -46,6 +44,10 @@ $(document).ready(function () {
 
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
     slideshowContainer.mouseenter(function () { pauseSlider(); }).mouseleave(function () { resumeSlider(); });
+
+    //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
+    $(".accessory").click(openNav);
+    closeBtn.click(closeNav);
 
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);

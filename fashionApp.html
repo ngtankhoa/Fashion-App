@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -19,7 +20,7 @@
 <body>
     <!-- sidenav -->
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <div class="container">
             <h5 id="productInfo">THÔNG TIN SẢN PHẨM</h5>
             <div class="row">
@@ -59,22 +60,18 @@
             <div class="row">
                 <!-- thumbnail -->
                 <div class="d-none d-sm-block col-sm-2 test3">
+                    <i class="material-icons">keyboard_arrow_up</i>
                     <div id="thumbnail">
                         <div class="thumbs">
-                            <div class="thumb">
-                                <img src="img/slider1.png" alt="thumb1" class="img-fluid" onclick="thumb_showSlides(0)">
-                            </div>
-                            <div class="thumb">
-                                <img src="img/slider2.png" alt="thumb2" class="img-fluid" onclick="thumb_showSlides(1)">
-                            </div>
-                            <div class="thumb">
-                                <img src="img/slider3.png" alt="thumb3" class="img-fluid" onclick="thumb_showSlides(2)">
-                            </div>
-                            <div class="thumb">
-                                <img src="img/slider4.png" alt="thumb4" class="img-fluid" onclick="thumb_showSlides(3)">
-                            </div>
+                            <img src="img/slider1.png" alt="thumb1" class="img-fluid" onclick="thumb_showSlides(0)">
+                            <img src="img/slider2.png" alt="thumb2" class="img-fluid" onclick="thumb_showSlides(1)">
+                            <img src="img/slider3.png" alt="thumb3" class="img-fluid" onclick="thumb_showSlides(2)">
+                            <img src="img/slider4.png" alt="thumb4" class="img-fluid" onclick="thumb_showSlides(3)">
+                            
                         </div>
                     </div>
+                    <i class="material-icons">keyboard_arrow_down</i>
+
                     <div class="language">
                         <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('vi')">Tiếng Việt</button>
                         <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('en')">English</button>
@@ -87,25 +84,25 @@
                         <div class="mySlides">
                             <img class="model" src="img/model.png" alt="model">
                             <p>1/4</p>
-                            <img src="img/non.png" alt="non" class="accessory" id="icon1-1" onclick="openNav()">
+                            <img src="img/non.png" alt="non" class="accessory" id="icon1-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model2.png" alt="model2">
                             <p>2/4</p>
-                            <img src="img/giay.png" alt="giay" class="accessory" id="icon2-1" onclick="openNav()">
+                            <img src="img/giay.png" alt="giay" class="accessory" id="icon2-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model3.png" alt="mode3">
                             <p>3/4</p>
-                            <img src="img/tuixach.png" alt="tuixach" class="accessory" id="icon3-1" onclick="openNav()">
+                            <img src="img/tuixach.png" alt="tuixach" class="accessory" id="icon3-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model4.png" alt="model4">
                             <p>4/4</p>
-                            <img src="img/giay.png" alt="giay" class="accessory" id="icon4-1" onclick="openNav()">
+                            <img src="img/giay.png" alt="giay" class="accessory" id="icon4-1">
                         </div>
 
                         <a class="prev d-block d-sm-none" onclick="subSlides()">&#10094;</a>
