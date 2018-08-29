@@ -52,3 +52,5 @@ $(document).ready(function () {
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);
 });
+
+//sắp xếp các div trong col-2 theo bootstrap
