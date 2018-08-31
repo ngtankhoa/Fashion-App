@@ -76,6 +76,7 @@
 
 .next {
   right: 0px;
+  text-align: right;
 }
 
 .model {
@@ -93,7 +94,8 @@
 
 .accessory {
   position: absolute;
-  width: 80px;
+  width: 20%;
+  max-width: 70px;
 }
 
 /* position icon on each slides */
@@ -129,18 +131,23 @@
 
 
 /* thumbnail */
-#thumbnail {
-  height: 45%;
-  max-height: 250px;
+.thumbnailWrapper {
+  height: 50%;
   max-width: 60px;
+}
+
+#arrowup, #arrowdown {
+  cursor: pointer;
+}
+
+#thumbnail {
+  height: 80%;
+  max-height: 250px;
   overflow-y: scroll;
 }
 
-#thumbnail .thumbs {
-  display: block;
-}
-
 #thumbnail img {
+  display: block;
   cursor: pointer;
   margin-top: 6px;
 }

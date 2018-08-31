@@ -1,13 +1,13 @@
 {
     "en": {
         "productInfo": "PRODUCT INFORMATION",
-        "productImg": "product image URL",
-        "productDetail": "this is the detail for product image. this is detail for product image, this is details for product image",
         "promotion": "PROMOTION",
+        "direction": "DIRECTION",
         "promotionDetail": "this is the detail for promotion",
         "barcode": "barcode URL",
-        "direction": "DIRECTION",
-        "directionDetail": "direction image URL"
+        "directionDetail": "direction image URL",
+        "productImg": "product image URL",
+        "productDetail": "this is the detail for product image. this is detail for product image, this is details for product image"
     },
     "vi": {
         "productInfo": "THÔNG TIN SẢN PHẨM",

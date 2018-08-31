@@ -48,9 +48,7 @@
                     details for direction
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <!-- wrapper -->
@@ -60,21 +58,19 @@
             <div class="row">
                 <!-- thumbnail -->
                 <div class="d-none d-sm-block col-sm-2 test3">
-                    <i class="material-icons d-block">keyboard_arrow_up</i>
-                    <div id="thumbnail">
-                        <div class="thumbs">
-                            <img src="img/slider1.png" alt="thumb1" class="img-fluid" onclick="thumb_showSlides(0)">
-                            <img src="img/slider2.png" alt="thumb2" class="img-fluid" onclick="thumb_showSlides(1)">
-                            <img src="img/slider3.png" alt="thumb3" class="img-fluid" onclick="thumb_showSlides(2)">
-                            <img src="img/slider4.png" alt="thumb4" class="img-fluid" onclick="thumb_showSlides(3)">
-                            
+                    <div class="thumbnailWrapper">
+                        <i id="arrowup" class="material-icons d-block text-center">keyboard_arrow_up</i>
+                        <div id="thumbnail">
+                            <img src="img/slider1.png" alt="thumb1" class="img-fluid">
+                            <img src="img/slider2.png" alt="thumb2" class="img-fluid">
+                            <img src="img/slider3.png" alt="thumb3" class="img-fluid">
+                            <img src="img/slider4.png" alt="thumb4" class="img-fluid">
                         </div>
+                        <i id="arrowdown" class="material-icons d-block text-center">keyboard_arrow_down</i>
                     </div>
-                    <i class="material-icons">keyboard_arrow_down</i>
-
                     <div class="language">
-                        <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('vi')">Tiếng Việt</button>
-                        <button class="btn btn-block btn-light btn-outline-dark" onclick="changeLanguage('en')">English</button>
+                        <button id="vi" class="btn btn-block btn-light btn-outline-dark">Tiếng Việt</button>
+                        <button id="en" class="btn btn-block btn-light btn-outline-dark">English</button>
                     </div>
                 </div>
 
@@ -83,30 +79,30 @@
                     <div id="slider" class="slideshow-container">
                         <div class="mySlides">
                             <img class="model" src="img/model.png" alt="model">
-                            <p>1/4</p>
+                            <p>0/3</p>
                             <img src="img/non.png" alt="non" class="accessory" id="icon1-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model2.png" alt="model2">
-                            <p>2/4</p>
+                            <p>1/3</p>
                             <img src="img/giay.png" alt="giay" class="accessory" id="icon2-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model3.png" alt="mode3">
-                            <p>3/4</p>
+                            <p>2/3</p>
                             <img src="img/tuixach.png" alt="tuixach" class="accessory" id="icon3-1">
                         </div>
 
                         <div class="mySlides">
                             <img class="model" src="img/model4.png" alt="model4">
-                            <p>4/4</p>
+                            <p>3/3</p>
                             <img src="img/giay.png" alt="giay" class="accessory" id="icon4-1">
                         </div>
 
-                        <a class="prev d-block d-sm-none" onclick="subSlides()">&#10094;</a>
-                        <a class="next d-block d-sm-none" onclick="plusSlides()">&#10095;</a>
+                        <a class="prev d-block d-sm-none">&#10094;</a>
+                        <a class="next d-block d-sm-none">&#10095;</a>
                     </div>
                 </div>
             </div>

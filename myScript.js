@@ -5,7 +5,9 @@ $(document).ready(function () {
     var sideNavOpen = 'false';
     var sliderPauseTime = 3000, pauseTimeSideNav = 10000;
     var closeBtn = $(".closebtn");
-    var thumbContainer = $("#thumbnail");
+    var prev = $(".prev, #arrowup");
+    var next = $(".next, #arrowdown");
+    var languageEN = $("#en"), languageVI = $("#vi");
 
     function openNav() {
         sideNavOpen = 'true';
@@ -24,6 +26,7 @@ $(document).ready(function () {
 
     function showSlides(n) {
         slideIndex = n;
+        if (slideIndex < 0) { slideIndex = 3; }
         $slides.css("display", "none");
         $slides.eq(slideIndex).css("display", "block");
         if (slideIndex < $slides.length - 1) { slideIndex++; } //độ dài của $slides là 4
@@ -49,8 +52,34 @@ $(document).ready(function () {
     $(".accessory").click(openNav);
     closeBtn.click(closeNav);
 
+    //bắt sự kiện click 4 arrow
+    prev.click(function () {
+        clearTimeout(timeoutSlider);
+        showSlides(slideIndex - 2);
+    });
+    next.click(function () {
+        clearTimeout(timeoutSlider);
+        showSlides(slideIndex);
+    });
+
+    //bắt sự kiện nút chuyển đổi ngôn ngữ
+    languageVI.click(function () {
+
+    });
+    languageEN.click(function () {
+
+    });
+
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);
 });
 
-//sắp xếp các div trong col-2 theo bootstrap
+//nạp json chuyển đổi ngôn ngữ
+//dùng hàm lấy dữ liệu từ file local
+
+//nạp json dữ liệu đầu vào của từng icon
+//(tạm thời 2 cái này lấy dữ liệu từ local trước đã)
+
+//sửa function nút prev
+//làm animation cho slide
+//viết lại function cho thumbnail slider
