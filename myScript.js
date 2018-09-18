@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    //kiểm tra có tổng cộng bao nhiêu hình và sinh slide mới
+    $.get("")
+        .done(function () {
+            console.log("hihi");
+        }).fail(function () {
+            console.log("huhu");
+        })
+
     var $slides = $(".mySlides");
     var slideshowContainer = $(".slideshow-container");
     var slideIndex = 0, timeoutSlider, timeoutSidenav;
@@ -72,6 +80,7 @@ $(document).ready(function () {
 
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);
+
 });
 
 //nạp json chuyển đổi ngôn ngữ
