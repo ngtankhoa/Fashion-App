@@ -1,12 +1,19 @@
 $(document).ready(function () {
     //kiểm tra có tổng cộng bao nhiêu hình và sinh slide mới
-    $.get("")
-        .done(function () {
-            console.log("hihi");
-        }).fail(function () {
-            console.log("huhu");
-        })
+    // var tmpURLSlider = "http://localhost:1337/images/model/model";
+    // var tmpURLThumbnail = "http://localhost:1337/images/thumbnail/thumbnail";
+    // var slidesLength = 0, boo = 'true';
+    // do {
+    //     $.get("http://localhost:1337/images/model/model" + slidesLength)
+    //     .done(function () {
+    //         slidesLength;
+    //     }).fail(function () {
+    //         boo = 'false';
+    //     });
+        
+    // } while (boo === 'true');
 
+    //khai báo các biến ban đầu
     var $slides = $(".mySlides");
     var slideshowContainer = $(".slideshow-container");
     var slideIndex = 0, timeoutSlider, timeoutSidenav;
