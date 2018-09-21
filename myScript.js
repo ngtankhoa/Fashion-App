@@ -27,8 +27,8 @@ $(document).ready(function () {
     function openNav() {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginRight = "250px";
+        document.getElementById("mySidenav").style.width = "27%";
+        document.getElementById("main").style.marginRight = "27%";
         timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 

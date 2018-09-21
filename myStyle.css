@@ -47,6 +47,8 @@ body {
   background-color: white;
   border: 7px solid lightgray;
   border-radius: 13px;
+  padding-top:10%;
+  padding-bottom:10%;
 }
 
 /* for verticaling align div in body */
@@ -188,3 +190,4 @@ body {
 .language button:active {
   background-color: lightgrey;
 }
+
