@@ -74,7 +74,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  margin-top: 9.3%;
 }
 
 
@@ -82,7 +81,6 @@ body {
 /* style the page content */
 #main {
   transition: margin-right .5s;
-  margin-top: 5.22%;
   max-height: 900px;
 }
 
