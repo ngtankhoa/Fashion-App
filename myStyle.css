@@ -82,7 +82,8 @@ body {
 /* style the page content */
 #main {
   transition: margin-right .5s;
-  height: 83.3%;
+  margin-top: 5.22%;
+  max-height: 900px;
 }
 
 .mySlides {
