@@ -29,7 +29,7 @@ $(document).ready(function () {
         clearTimeout(timeoutSidenav);
         document.getElementById("mySidenav").style.width = "27%";
         document.getElementById("main").style.marginRight = "27%";
-        timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
+       // timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 
     function closeNav() {

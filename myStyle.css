@@ -32,7 +32,7 @@ body {
   background-color: lightgray;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 40px;
+  padding-top: 3%; 
 }
 
 .sidenav .closebtn {
@@ -51,12 +51,25 @@ body {
   padding-bottom:10%;
 }
 
+.sidenavContainer #productDetail #productColor .btn{
+  padding : 1rem;
+  margin-bottom: 0.5rem;
+} 
+
+.sidenavContainer  #productImg{
+  padding: 2rem;
+}
+
 /* for verticaling align div in body */
 .wrapper {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
+=======
+  margin-top: 9.3%;
+>>>>>>> 39a9c1dd4efb42b953597b91110b7bc167eed805
 }
 
 /* style the page content */
