@@ -31,7 +31,7 @@ body {
   right: 0;
   background-color: lightgray;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 1s;
   padding-top: 3%; 
 }
 
@@ -80,7 +80,6 @@ body {
 
 /* style the page content */
 #main {
-  transition: margin-right .5s;
   max-height: 900px;
 }
 
@@ -124,8 +123,7 @@ body {
 
 .accessory {
   position: absolute;
-  width: 20%;
-  max-width: 70px;
+  width: 13.4vh;
 }
 
 /* position icon on each slides */
@@ -163,7 +161,8 @@ body {
 /* thumbnail */
 .thumbnailWrapper {
   height: 50%;
-  max-width: 60px;
+  max-width: 9.3vh;
+  margin-left: 4.2vw;
 }
 
 #arrowup, #arrowdown {
@@ -171,15 +170,15 @@ body {
 }
 
 #thumbnail {
-  height: 80%;
-  max-height: 250px;
+  height: 45vh;
   overflow-y: scroll;
 }
 
 #thumbnail img {
   display: block;
   cursor: pointer;
-  margin-top: 6px;
+  margin-top: 1.6vh;
+  margin-bottom: 1.6vh;
 }
 
 /* make scrollbar invisible */
@@ -189,16 +188,20 @@ body {
 
 .language {
   position: absolute;
-  bottom: 10px;
+  bottom: 7.4vh;
+  left: 4.5vw;
 }
 
 .language button {
   display: block;
   text-align: center;
-  border: 1px solid lightgrey;
+  border: 2px solid #83878a;
+  background-image: radial-gradient(rectangle, white, lightgrey);
+
   outline: none;
   cursor: pointer;
-  width: 120%;
+  height: 3.7vh;
+  width: 10vw;
   padding-top: 2px;
   padding-bottom: 2px;
   margin-bottom: 4%;
