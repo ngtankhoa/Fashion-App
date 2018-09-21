@@ -56,8 +56,16 @@ body {
   margin-bottom: 0.5rem;
 } 
 
+.sidenavContainer #productDetail #productPrice{
+  margin: 1rem;
+}
+
 .sidenavContainer  #productImg{
   padding: 2rem;
+}
+
+.sidenavContainer #barcode{
+  width: 5.5%;
 }
 
 /* for verticaling align div in body */
@@ -68,6 +76,8 @@ body {
   align-items: center;
   margin-top: 9.3%;
 }
+
+
 
 /* style the page content */
 #main {
