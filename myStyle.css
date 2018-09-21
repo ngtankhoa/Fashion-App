@@ -53,18 +53,17 @@ body {
 
 /* for verticaling align div in body */
 .wrapper {
-  /* min-height: 100%;
+  min-height: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center; */
-
-  margin-top: 9.3%;
+  align-items: center;
 }
 
 /* style the page content */
 #main {
   transition: margin-right .5s;
-  height: 83.3%;
+  margin-top: 5.22%;
+  max-height: 900px;
 }
 
 .mySlides {
