@@ -64,8 +64,9 @@ body {
   padding: 2rem;
 }
 
-.sidenavContainer #barcode{
-  width: 5.5%;
+.sidenavContainer #barcode #qrcodeImg{
+  width: 9.3vw;
+  max-width: 100%;
 }
 
 /* for verticaling align div in body */
@@ -81,6 +82,7 @@ body {
 /* style the page content */
 #main {
   max-height: 900px;
+  
 }
 
 .mySlides {
@@ -94,6 +96,7 @@ body {
   position: relative;
   margin: auto;
   left: 0px;
+  transition: 5s;
 }
 
 .prev, .next {

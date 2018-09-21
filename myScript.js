@@ -10,7 +10,7 @@ $(document).ready(function () {
     //     }).fail(function () {
     //         boo = 'false';
     //     });
-        
+
     // } while (boo === 'true');
 
     //khai báo các biến ban đầu
@@ -28,8 +28,8 @@ $(document).ready(function () {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
         document.getElementById("mySidenav").style.width = "27%";
-        document.getElementById("main").style.marginRight = "27%";
-       // timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
+        document.getElementById("").style.width = "50vw";
+        // timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 
     function closeNav() {
@@ -41,12 +41,28 @@ $(document).ready(function () {
 
     function showSlides(n) {
         slideIndex = n;
-        if (slideIndex < 0) { slideIndex = 3; }
+        console.log("index trong show:" + slideIndex);
         $slides.css("display", "none");
         $slides.eq(slideIndex).css("display", "block");
         if (slideIndex < $slides.length - 1) { slideIndex++; } //độ dài của $slides là 4
         else { slideIndex = 0; }
-        timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
+        // timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
+    }
+
+    function showSlidesNgc(n) {
+        console.log(slideIndex);
+        slideIndex = n;
+        if (slideIndex == -1) { slideIndex = 3; }
+        else if (slideIndex == 0) { slideIndex = 1; }
+        else if (slideIndex == 1) { slideIndex = 2; }
+        else if (slideIndex == -2) { slideIndex = 0; };
+        console.log("index trong show:" + slideIndex);
+        $slides.css("display", "none");
+        $slides.eq(slideIndex).css("display", "block");
+        if (slideIndex == 1) {
+            slideIndex = slideIndex - 1;
+        }
+        // timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
     }
 
     function pauseSlider() {
@@ -70,7 +86,11 @@ $(document).ready(function () {
     //bắt sự kiện click 4 arrow
     prev.click(function () {
         clearTimeout(timeoutSlider);
-        showSlides(slideIndex - 2);
+        console.log("truoc:" + slideIndex);
+        var tmp = slideIndex - 2;
+        console.log("tmp: " + tmp);
+        showSlidesNgc(tmp);
+        console.log(slideIndex);
     });
     next.click(function () {
         clearTimeout(timeoutSlider);
