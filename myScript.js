@@ -9,7 +9,7 @@ $(document).ready(() => {
     var closeBtn = $(".closebtn");
     var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
-
+    var mapPopup = $("#map-sidebar"); 
     var languageEN = $("#en"), languageVI = $("#vi");
 
     openNav = () => {
@@ -64,6 +64,10 @@ $(document).ready(() => {
         timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 
+    showPopup = () => {
+        
+    }
+
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
     slideshowContainer.mouseenter(() => { pauseSlider(); }).mouseleave(() => { resumeSlider(); });
 
@@ -100,6 +104,7 @@ $(document).ready(() => {
     $colorItemSlides.css("display", "none");
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
+    //Map popup
 
 });
 
