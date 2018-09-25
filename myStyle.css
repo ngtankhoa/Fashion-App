@@ -31,7 +31,7 @@ body {
   right: 0;
   background-color: lightgray;
   overflow-x: hidden;
-  transition: 1s;
+  transition: .5s;
   padding-top: 3%; 
 }
 
@@ -96,7 +96,6 @@ body {
   position: relative;
   margin: auto;
   left: 0px;
-  transition: 5s;
 }
 
 .prev, .next {
@@ -130,6 +129,7 @@ body {
 }
 
 /* position icon on each slides */
+/* just for testing */
 #icon1-1 {
   top:10%;
   right: 10%;
@@ -163,18 +163,18 @@ body {
 
 /* thumbnail */
 .thumbnailWrapper {
-  height: 50%;
   max-width: 9.3vh;
   margin-left: 4.2vw;
 }
 
-#arrowup, #arrowdown {
-  cursor: pointer;
+#thumbnail {
+  height: 25vh;
+  overflow-y: scroll;
 }
 
-#thumbnail {
-  height: 45vh;
-  overflow-y: scroll;
+.thumbnailWrapper #arrowUp, .thumbnailWrapper #arrowDown {
+  cursor: pointer;
+  margin-left: 30px;
 }
 
 #thumbnail img {
