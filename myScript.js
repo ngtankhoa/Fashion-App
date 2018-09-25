@@ -17,7 +17,7 @@ $(document).ready(() => {
         clearTimeout(timeoutSidenav);
         document.getElementById("mySidenav").style.width = "27%";
         document.getElementById("main").style.marginRight = "20vw";
-        timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
+        // timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 
     closeNav = () => {

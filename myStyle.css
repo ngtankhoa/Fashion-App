@@ -38,9 +38,18 @@ body {
 .sidenav .closebtn {
   position: absolute;
   top:0;
-  right: 25px;
-  font-size: 25px;
-  margin-left: 50px;
+  right: 1.75vw;
+  font-size: 30px;
+  font-weight: bold;
+ 
+  margin-top: 3%;
+  width: 2vw;
+  color:#83878a;
+  text-align: center;
+  border: 1px solid #5d5555;
+  border-radius: 10%;
+  text-decoration: none;
+  text-decoration-color: #83878a;
 }
 
 .sidenavContainer {
