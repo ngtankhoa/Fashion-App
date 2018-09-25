@@ -19,5 +19,11 @@
         "barcode": "URL hình ảnh barcode",
         "direction": "CHỈ ĐƯỜNG",
         "directionDetail": "URL hình ảnh chỉ đường"
+    },
+
+    "product"  : {
+        
     }
+
+
 }

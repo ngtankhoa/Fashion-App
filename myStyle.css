@@ -77,7 +77,10 @@ body {
   align-items: center;
 }
 
-
+#map-sidebar{
+  width: 100%;
+  max-width: 100%;
+}
 
 /* style the page content */
 #main {
