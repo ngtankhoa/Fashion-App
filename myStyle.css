@@ -32,7 +32,7 @@ body {
   background-color: lightgray;
   overflow-x: hidden;
   transition: .5s;
-  padding-top: 3%; 
+  padding-top: 2%; 
 }
 
 .sidenav .closebtn {
@@ -47,8 +47,8 @@ body {
   background-color: white;
   border: 7px solid lightgray;
   border-radius: 13px;
-  padding-top:10%;
-  padding-bottom:10%;
+  padding-top:8%;
+  padding-bottom:8%;
 }
 
 .sidenavContainer #productDetail #productColor .btn{
@@ -58,10 +58,6 @@ body {
 
 .sidenavContainer #productDetail #productPrice{
   margin: 1rem;
-}
-
-.sidenavContainer  #productImg{
-  padding: 2rem;
 }
 
 .sidenavContainer #barcode #qrcodeImg{
