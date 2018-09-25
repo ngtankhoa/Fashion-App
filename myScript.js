@@ -2,7 +2,8 @@ $(document).ready(() => {
     //khai báo các biến ban đầu
     var $slides = $(".mySlides");
     var slideshowContainer = $(".slideshow-container");
-    var slideIndex = 0, timeoutSlider, timeoutSidenav;
+    var $colorItemSlides = $(".colorItemSlides");
+    var slideIndex = 0, colorIndex = 0, timeoutSlider, timeoutSidenav;
     var sideNavOpen = 'false';
     var sliderPauseTime = 3000, pauseTimeSideNav = 10000;
     var closeBtn = $(".closebtn");
@@ -45,6 +46,23 @@ $(document).ready(() => {
         timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
     }
 
+    showColorItem = () => {
+        if (colorIndex < $colorItemSlides.length - 1) { colorIndex++ }
+        else { colorIndex = 0; }
+        $colorItemSlides.css("display", "none");
+        $colorItemSlides.eq(colorIndex).css("display", "block");
+        clearTimeout(timeoutSidenav);
+        timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
+    }
+
+    showColorItemReverse = () => {
+        if (colorIndex < 0) { colorIndex = $colorItemSlides.length - 2; }
+        else { colorIndex--; }
+        $colorItemSlides.css("display", "none");
+        $colorItemSlides.eq(colorIndex).css("display", "block");
+        clearTimeout(timeoutSidenav);
+        timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
+    }
 
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
     slideshowContainer.mouseenter(() => { pauseSlider(); }).mouseleave(() => { resumeSlider(); });
@@ -55,17 +73,16 @@ $(document).ready(() => {
 
     //bắt sự kiện click scrollUp và scrollDown
     scrollUp.click(() => {
-
     });
     scrollDown.click(() => {
     });
 
     //bắt sự kiện click slideUp và slideDown
     slideUp.click(() => {
-
+        showColorItemReverse();
     });
     slideDown.click(() => {
-
+        showColorItem();
     });
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
@@ -78,6 +95,11 @@ $(document).ready(() => {
 
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);
+
+    //phần onload của slide màu sắc trang phục
+    $colorItemSlides.css("display", "none");
+    $colorItemSlides.eq(colorIndex).css("display", "block");
+
 
 });
 
