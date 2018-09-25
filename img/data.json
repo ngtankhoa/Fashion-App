@@ -9,7 +9,6 @@
         "productImg": "product image URL",
         "productDetail": "this is the detail for product image. this is detail for product image, this is details for product image"
     },
-    
     "vi": {
         "productInfo": "THÔNG TIN SẢN PHẨM",
         "productImg": "URL hình ảnh sản phẩm",
@@ -20,10 +19,34 @@
         "direction": "CHỈ ĐƯỜNG",
         "directionDetail": "URL hình ảnh chỉ đường"
     },
-
-    "product"  : {
-        
-    }
-
-
+    "data": [
+        {
+            "product": [
+                {
+                    "productName": "váy",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "map-sidebar": "./img/map-sidebar.png"
+                }
+            ],
+            "models": {
+                "thumbnailModel": [
+                    "img/slider1.png"
+                ],
+                "model": [
+                    {
+                        "modelImg": "img/model.png",
+                        "accessoryImg": "img/giay.png"
+                    }
+                ]
+            }
+        }
+    ]
 }
