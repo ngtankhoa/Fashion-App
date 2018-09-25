@@ -100,6 +100,13 @@ $(document).ready(() => {
     $colorItemSlides.css("display", "none");
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
+    // test load json
+    $.getJSON("img/data.json",
+        function (data) {
+            console.log(data);
+        }
+    );
+
 
 });
 
