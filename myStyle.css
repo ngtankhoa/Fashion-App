@@ -45,19 +45,36 @@ body {
   left: 0;
   top : 0;
   padding-top:20%; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9);
-  
-  
+  background-color: rgba(196, 196, 196, 0.2);
 }
 
-.popup-content{
-  width: 40%;
-  margin: auto;
+#contentPopup{
+  width: 50%;
+  height: 50vh;
+  margin: auto ;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  background: rgb(236, 234, 234);
+  border: #83878a 1px solid;
+  border-radius: 12px;
 }
+#contentPopup img{
+  width: 85%;
+}
+#closePopup {
+ 
+  top: 0;
+  right : 0;
+  color: #83878a;
+  padding: 2%;
+  font-weight: bold;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 2;
+}
+
 
 .sidenav .closebtn {
   position: absolute;
@@ -65,13 +82,10 @@ body {
   right: 1.75vw;
   font-size: 30px;
   font-weight: bold;
- 
   margin-top: 3%;
   width: 2vw;
   color:#83878a;
   text-align: center;
-  border: 1px solid #5d5555;
-  border-radius: 10%;
   text-decoration: none;
   text-decoration-color: #83878a;
 }

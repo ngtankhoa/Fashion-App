@@ -4,15 +4,16 @@ $(document).ready(() => {
     var slideshowContainer = $(".slideshow-container");
     var $colorItemSlides = $(".colorItemSlides");
     var slideIndex = 0, colorIndex = 0, timeoutSlider, timeoutSidenav;
+    var timeoutPopup;
     var sideNavOpen = 'false';
-    var sliderPauseTime = 3000, pauseTimeSideNav = 10000;
+    var sliderPauseTime = 3000, pauseTimeSideNav = 10000, popupTime = 3000;
     var closeBtn = $(".closebtn");
     var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
     var mapPopup = $("#map-sidebar");
     var languageEN = $("#en"), languageVI = $("#vi");
-    var closePupup = $("#closePopup");
-
+    var closePopup = $("#closePopup");
+    var qrPopup = $("#qrcodeImg");
     openNav = () => {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
@@ -65,10 +66,20 @@ $(document).ready(() => {
         timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
     }
 
-    showPopup = () => {
+    showMapPopup = () => {
         document.getElementById("popup").style.display = "block";
-        document.getElementById("imgPopup").src = "./img/map-sidebar.png";
+        document.getElementById("imgPopup").src = "./img/map-popup.png";
+        timeoutPopup = setTimeout(()=>{
+            document.getElementById("popup").style.display = "none";
+        }, popupTime );
+    }
 
+    showQrPopup = () => {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("imgPopup").src = "./img/promotion-popup.png";
+        timeoutPopup = setTimeout(()=>{
+            document.getElementById("popup").style.display = "none";
+        }, popupTime );
     }
 
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
@@ -129,12 +140,18 @@ $(document).ready(() => {
     //Map popup
     mapPopup.click (() => {
         console.log("Chay vao day");
-        showPopup();
+        showMapPopup();
     });
 
     //Close popup
     closePopup.click(() => {
+        console.log("dong popup");
         document.getElementById("popup").style.display = "none";
+    });
+
+    qrPopup.click (() => {
+        console.log("Chay vao day");
+        showQrPopup();
     });
 });
 
