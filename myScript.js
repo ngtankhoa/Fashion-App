@@ -9,7 +9,7 @@ $(document).ready(() => {
     var closeBtn = $(".closebtn");
     var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
-    var mapPopup = $("#map-sidebar"); 
+    var mapPopup = $("#map-sidebar");
     var languageEN = $("#en"), languageVI = $("#vi");
 
     openNav = () => {
@@ -65,11 +65,21 @@ $(document).ready(() => {
     }
 
     showPopup = () => {
-        
+
     }
 
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
-    slideshowContainer.mouseenter(() => { pauseSlider(); }).mouseleave(() => { resumeSlider(); });
+    //slideshowContainer.mouseenter(() => { pauseSlider(); }).mouseleave(() => { resumeSlider(); });
+    //vì đây là desktop touch nên ta thay mouseenter và mouseleave bằng click của cả document
+    $("body").click(() => {
+        clearTimeout(timeoutSlider);
+        console.log("clear timeoutSlider");
+        if (sideNavOpen === 'false')
+        {
+            timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
+            console.log("dat lai timeoutSlider");
+        }
+    });
 
     //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
     $(".accessory").click(openNav);
@@ -107,7 +117,7 @@ $(document).ready(() => {
     // test load json
     $.getJSON("img/data.json",
         function (data) {
-            console.log(data);
+
         }
     );
 

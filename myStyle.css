@@ -186,11 +186,6 @@ body {
   overflow-y: scroll;
 }
 
-.thumbnailWrapper #arrowUp, .thumbnailWrapper #arrowDown {
-  cursor: pointer;
-  margin-left: 30px;
-}
-
 #thumbnail img {
   display: block;
   cursor: pointer;
