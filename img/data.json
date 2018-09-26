@@ -19,34 +19,60 @@
         "direction": "CHỈ ĐƯỜNG",
         "directionDetail": "URL hình ảnh chỉ đường"
     },
-    "data": [
+    "models": [
         {
-            "models": {
-                "thumbnailModel": [
-                    "img/slider1.png"
-                ],
-                "model": [
-                    {
-                        "modelImg": "img/model.png",
-                        "accessory": [
-                            {
-                                "accessoryImg": "img/giay.png",
-                                "productName": "váy",
-                                "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
-                                "productPrice": "5.000.000",
-                                "imgProduct": [
-                                    "./img/vay1.png",
-                                    "./img/vay2.png",
-                                    "./img/vay3.png"
-                                ],
-                                "promotionDetail": "Using color to add meaning only provides a visual indication",
-                                "qrcodeImg": "./img/qrcode.png",
-                                "map-sidebar": "./img/map-sidebar.png"
-                            }
-                        ]
-                    }
-                ]
-            }
+            "thumbnailModel": "img/slider1.png",
+            "modelImg": "img/model.png",
+            "accessory": [
+                {
+                    "accessoryImg": "img/giay.png",
+                    "productName": "váy",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "map-sidebar": "./img/map-sidebar.png"
+                },
+                {
+                    "accessoryImg": "img/giay.png",
+                    "productName": "váy",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "map-sidebar": "./img/map-sidebar.png"
+                }
+            ]
+        },
+        {
+            "thumbnailModel": "img/slider2.png",
+            "modelImg": "img/model.png",
+            "accessory": [
+                {
+                    "accessoryImg": "img/giay.png",
+                    "productName": "váy",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "map-sidebar": "./img/map-sidebar.png"
+                }
+            ]
         }
     ]
 }
