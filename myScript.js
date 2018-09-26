@@ -6,7 +6,7 @@ $(document).ready(() => {
     var slideIndex = 0, colorIndex = 0, timeoutSlider, timeoutSidenav;
     var timeoutPopup;
     var sideNavOpen = 'false';
-    var sliderPauseTime = 3000, pauseTimeSideNav = 10000, popupTime = 3000;
+    var sliderPauseTime = 1000, pauseTimeSideNav = 10000, popupTime = 3000;
     var closeBtn = $(".closebtn");
     var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
@@ -67,33 +67,52 @@ $(document).ready(() => {
     }
 
     showMapPopup = () => {
+        console.log("function show map popup");
         document.getElementById("popup").style.display = "block";
         document.getElementById("imgPopup").src = "./img/map-popup.png";
-        timeoutPopup = setTimeout(()=>{
+        clearTimeout(timeoutPopup);
+        timeoutPopup = setTimeout(() => {
             document.getElementById("popup").style.display = "none";
-        }, popupTime );
+        }, popupTime);
     }
 
     showQrPopup = () => {
         document.getElementById("popup").style.display = "block";
         document.getElementById("imgPopup").src = "./img/promotion-popup.png";
-        timeoutPopup = setTimeout(()=>{
+        clearTimeout(timeoutPopup);
+        timeoutPopup = setTimeout(() => {
             document.getElementById("popup").style.display = "none";
-        }, popupTime );
+        }, popupTime);
     }
 
-    //bắt sự kiện mouseenter và mouseleave để quản lí slider
-    //slideshowContainer.mouseenter(() => { pauseSlider(); }).mouseleave(() => { resumeSlider(); });
+    //check tương tác màn hình
     //vì đây là desktop touch nên ta thay mouseenter và mouseleave bằng click của cả document
     $("body").click(() => {
+        console.log("body click");
         clearTimeout(timeoutSlider);
         console.log("clear timeoutSlider");
-        if (sideNavOpen === 'false')
-        {
+        // document.getElementById("popup").style.display = "none";
+        if (sideNavOpen === 'false') {
             timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
             console.log("dat lai timeoutSlider");
         }
     });
+
+    //bắt sự kiện click outside popup (2 event phía dưới)
+    $("#popup").click(() => {
+        console.log("#popup click"); 
+        //tắt popup
+        document.getElementById("popup").style.display = "none";
+    })
+
+    $("#imgPopup").click((event) => {
+        console.log("imgpopup click");
+        event.stopPropagation();
+        clearTimeout(timeoutPopup);
+        timeoutPopup = setTimeout(() => {
+            document.getElementById("popup").style.display = "none";
+        }, popupTime);
+    })
 
     //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
     $(".accessory").click(openNav);
@@ -107,20 +126,16 @@ $(document).ready(() => {
 
     //bắt sự kiện click slideUp và slideDown
     slideUp.click(() => {
-        
         showColorItemReverse();
     });
     slideDown.click(() => {
-       
         showColorItem();
     });
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
     languageVI.click(() => {
-       
     });
     languageEN.click(() => {
-
     });
 
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
@@ -137,19 +152,19 @@ $(document).ready(() => {
         }
     );
 
-    //Map popup
-    mapPopup.click (() => {
-        console.log("Chay vao day");
+    //mở popup
+    mapPopup.click(() => {
+        console.log("#map-sidebar click");
         showMapPopup();
     });
 
-    //Close popup
+    //đóng popup
     closePopup.click(() => {
-        console.log("dong popup");
+        console.log("#closepopup click");
         document.getElementById("popup").style.display = "none";
     });
 
-    qrPopup.click (() => {
+    qrPopup.click(() => {
         console.log("Chay vao day");
         showQrPopup();
     });
