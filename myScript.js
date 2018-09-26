@@ -149,10 +149,10 @@ $(document).ready(() => {
     $.getJSON("img/data.json",
         function (data) {
             console.log(data);
-            console.log(data.data[0].models.thumbnailModel[0]);
+            console.log(data.models[0].thumbnailModel);
             console.log(data.en.direction);
             languageEN.click(() => {
-                var test = "<h5 id='direction'>" + data.en.direction + "</h5>";
+                var test = "<h5 id='direction'>"  + data.en.direction + "</h5>";
                 $("#direction").replaceWith(test);
             });
         }
