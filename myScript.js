@@ -11,6 +11,7 @@ $(document).ready(() => {
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
     var mapPopup = $("#map-sidebar"); 
     var languageEN = $("#en"), languageVI = $("#vi");
+    var closePupup = $("#closePopup");
 
     openNav = () => {
         sideNavOpen = 'true';
@@ -65,7 +66,9 @@ $(document).ready(() => {
     }
 
     showPopup = () => {
-        
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("imgPopup").src = "./img/map-sidebar.png";
+
     }
 
     //bắt sự kiện mouseenter và mouseleave để quản lí slider
@@ -83,15 +86,17 @@ $(document).ready(() => {
 
     //bắt sự kiện click slideUp và slideDown
     slideUp.click(() => {
+        
         showColorItemReverse();
     });
     slideDown.click(() => {
+       
         showColorItem();
     });
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
     languageVI.click(() => {
-
+       
     });
     languageEN.click(() => {
 
@@ -112,7 +117,15 @@ $(document).ready(() => {
     );
 
     //Map popup
+    mapPopup.click (() => {
+        console.log("Chay vao day");
+        showPopup();
+    });
 
+    //Close popup
+    closePopup.click(() => {
+        document.getElementById("popup").style.display = "none";
+    });
 });
 
 
