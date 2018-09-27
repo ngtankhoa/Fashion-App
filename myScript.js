@@ -145,19 +145,6 @@ $(document).ready(() => {
     $colorItemSlides.css("display", "none");
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
-    // test load json
-    $.getJSON("img/data.json",
-        function (data) {
-            console.log(data);
-            console.log(data.models[0].thumbnailModel);
-            console.log(data.en.direction);
-            languageEN.click(() => {
-                var test = "<h5 id='direction'>"  + data.en.direction + "</h5>";
-                $("#direction").replaceWith(test);
-            });
-        }
-    );
-
     //mở popup
     mapPopup.click(() => {
         console.log("#map-sidebar click");
@@ -174,6 +161,40 @@ $(document).ready(() => {
         console.log("Chay vao day");
         showQrPopup();
     });
+
+    // test load json
+    $.getJSON("img/data.json",
+        function (data) {
+            console.log(data);
+            var thumbnailModel = data.models[0].thumbnailModel;
+            var modelImg       = data.models[0].modelImg;
+            var accessoryImg   = data.models[0].accessory[0].accessoryImg;
+            var productName    = data.models[0].accessory[0].productName;
+            var productDescription = data.models[0].accessory[0].productDescription;
+            var productPrice = data.models[0].accessory[0].productPrice;
+            var str = '';
+            for (var i in data.models[0].accessory[0].imgProduct){
+                var x = data.models[0].accessory[0].imgProduct[i];
+                str = str +  '<img class="colorItemSlides mx-auto" src="' + x + '" alt="mau ao 1" id="choose '+ i + 1 + '"></img>'
+            }
+            var mapSidebar = data.models[0].accessory[0].map-sidebar;
+            var promotionDetail  = data.models[0].accessory[0].promotionDetail;
+            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;   
+            console.log(data.en.direction);
+            languageEN.click(() => {
+              $("#thumbnailModel").replaceWith('<img src="'+ thumbnailModel + '" alt="thumb1" class="img-fluid" id="thumbnailModel">');
+              $("#modelImg").replaceWith('<img class="model" src="'+ modelImg +'" alt="model" id="modelImg">');
+              $('.accessory').replaceWith('<img src="'+ accessoryImg +'" alt="non" class="accessory" id="icon1-1" id="accessoryImg">');
+              $('#productName').replaceWith('<h3 id="productName">'+ productName +'</h3>');  
+              $("#productDescription").replaceWith('<div id="productDescription">'+ productDescription + '</div>');
+              $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+              $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail +'</div>');
+              $("qrcode").replaceWith('<img id="qrcodeImg" src="'+ qrcodeImg+'" alt="qrcode">');
+              $("#map-sidebar").replaceWith('<img src="'+ mapSidebar +'" alt="map-sidebar" id="map-sidebar">');
+              $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str +'</div>');
+            });
+        }
+    );
 });
 
 
