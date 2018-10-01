@@ -26,17 +26,17 @@
             "accessory": [
                 {
                     "accessoryImg": "img/giay.png",
-                    "productName": "váy",
-                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productName": "Váy",
+                    "productDescription": "đây là product description",
                     "productPrice": "5.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "promotionDetail": "Đây là promotionDetail",
                     "qrcodeImg": "./img/qrcode.png",
-                    "map-sidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png"
                 },
                 {
                     "accessoryImg": "img/giay.png",
@@ -50,7 +50,7 @@
                     ],
                     "promotionDetail": "Using color to add meaning only provides a visual indication",
                     "qrcodeImg": "./img/qrcode.png",
-                    "map-sidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png"
                 }
             ]
         },
@@ -70,7 +70,7 @@
                     ],
                     "promotionDetail": "Using color to add meaning only provides a visual indication",
                     "qrcodeImg": "./img/qrcode.png",
-                    "map-sidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png"
                 }
             ]
         }

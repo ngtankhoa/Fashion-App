@@ -173,25 +173,43 @@ $(document).ready(() => {
             var productDescription = data.models[0].accessory[0].productDescription;
             var productPrice = data.models[0].accessory[0].productPrice;
             var str = '';
-            for (var i in data.models[0].accessory[0].imgProduct){
+            var i , y;
+            for (i in data.models[0].accessory[0].imgProduct){
                 var x = data.models[0].accessory[0].imgProduct[i];
-                str = str +  '<img class="colorItemSlides mx-auto" src="' + x + '" alt="mau ao 1" id="choose '+ i + 1 + '"></img>'
+                var z = parseInt(i);
+                y = parseInt(z + 1);
+                str = str +  '<img class="colorItemSlides mx-auto" src="' + x + '" alt="mau ao ' + parseInt(y) + '" id="choose'+ parseInt(y)  + '">' + '\n'
             }
-            var mapSidebar = data.models[0].accessory[0].map-sidebar;
+            var mapSidebar = data.models[0].accessory[0].mapSidebar;
             var promotionDetail  = data.models[0].accessory[0].promotionDetail;
             var qrcodeImg = data.models[0].accessory[0].qrcodeImg;   
-            console.log(data.en.direction);
+            // console.log(thumbnailModel);
+            // console.log(modelImg );
+            // console.log(accessoryImg);
+            // console.log(productName);
+            // console.log(productDescription);
+            // console.log(productPrice);
+            // console.log(str);
+            // console.log(mapSidebar);
+            // console.log(promotionDetail);
+            // console.log(qrcodeImg);
+
             languageEN.click(() => {
-              $("#thumbnailModel").replaceWith('<img src="'+ thumbnailModel + '" alt="thumb1" class="img-fluid" id="thumbnailModel">');
-              $("#modelImg").replaceWith('<img class="model" src="'+ modelImg +'" alt="model" id="modelImg">');
-              $('.accessory').replaceWith('<img src="'+ accessoryImg +'" alt="non" class="accessory" id="icon1-1" id="accessoryImg">');
-              $('#productName').replaceWith('<h3 id="productName">'+ productName +'</h3>');  
-              $("#productDescription").replaceWith('<div id="productDescription">'+ productDescription + '</div>');
-              $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-              $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail +'</div>');
-              $("qrcode").replaceWith('<img id="qrcodeImg" src="'+ qrcodeImg+'" alt="qrcode">');
-              $("#map-sidebar").replaceWith('<img src="'+ mapSidebar +'" alt="map-sidebar" id="map-sidebar">');
-              $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str +'</div>');
+                // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
+                $("#productInfo").replaceWith(' <h5 id="productInfo">' + data.en.productInfo +'</h5>');
+                $("#productName").replaceWith('<h3 id="productName">'+ productName + '</h3>');
+                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+                $("#promotion").replaceWith('<h5 id="promotion">'+ data.en.promotion + '</h5>');
+                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                $("#qrcodeImg").replaceWith('<img id="qrcodeImg" src="' + qrcodeImg + '" alt="qrcode">');
+                $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+                $("#map-sidebar").replaceWith('<img src="' + mapSidebar  + '" alt="map-sidebar" id="map-sidebar">');
+            });
+
+            languageVI.click(() => {
+                $colorItemSlides.css("display", "none");
+                $colorItemSlides.eq(colorIndex).css("display", "block");
             });
         }
     );
