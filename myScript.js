@@ -7,7 +7,7 @@ $(document).ready(() => {
     var slideIndex = 0, colorIndex = 0, timeoutSlider, timeoutSidenav;
     var timeoutPopup;
     var sideNavOpen = 'false';
-    var sliderPauseTime = 1000, pauseTimeSideNav = 10000, popupTime = 3000;
+    var sliderPauseTime = 3000, pauseTimeSideNav = 10000, popupTime = 3000;
     var closeBtn = $(".closebtn");
     var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
@@ -31,13 +31,13 @@ $(document).ready(() => {
     }
     pauseSlider = () => {
         clearTimeout(timeoutSlider);
-        console.log("pause");
+        console.log("pause slider");
     }
 
     resumeSlider = () => {
         if (sideNavOpen === 'false')
             timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
-        console.log("resume");
+        console.log("resume slider");
     }
 
     showSlides = (n) => {
@@ -95,7 +95,7 @@ $(document).ready(() => {
         // document.getElementById("popup").style.display = "none";
         if (sideNavOpen === 'false') {
             timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
-            console.log("dat lai timeoutSlider");
+            console.log("set timeoutSlider");
         }
     });
 

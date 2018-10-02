@@ -27,28 +27,28 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "productName": "Váy",
-                    "productDescription": "đây là product description",
-                    "productPrice": "15.000.000",
+                    "productDescription": "đây là product description của item 1 trên slide 1",
+                    "productPrice": "1.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Đây là promotionDetail",
+                    "promotionDetail": "Đây là promotionDetail của item trên slide 1",
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 },
                 {
                     "accessoryImg": "img/giay.png",
                     "productName": "váy",
-                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
-                    "productPrice": "15.000.000",
+                    "productDescription": "product description của item 2 trên slide 1",
+                    "productPrice": "2.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "promotionDetail": "promotionDetail của item 2 trên slide 1",
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -61,14 +61,14 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "productName": "giày",
-                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
-                    "productPrice": "5.000.000",
+                    "productDescription": "mô tả product của item 1 trên slide 2",
+                    "productPrice": "3.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "promotionDetail": "khuyến mãi của item 1 trên slide 2",
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -81,14 +81,14 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "productName": "giày",
-                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productDescription": "mô tả product item 1 slide 3",
                     "productPrice": "5.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "promotionDetail": "khuyễn mãi item 1 slide 3",
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -101,14 +101,14 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "productName": "giày",
-                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
-                    "productPrice": "5.000.000",
+                    "productDescription": "mô tả product item 1 slide 4",
+                    "productPrice": "6.000.000",
                     "imgProduct": [
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
-                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "promotionDetail": "khuyễn mái item 1 slide 4",
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
