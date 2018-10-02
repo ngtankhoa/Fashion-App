@@ -56,11 +56,51 @@
         },
         {
             "thumbnailModel": "img/slider2.png",
-            "modelImg": "img/model.png",
+            "modelImg": "img/model2.png",
             "accessory": [
                 {
                     "accessoryImg": "img/giay.png",
-                    "productName": "váy",
+                    "productName": "giày",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "mapSidebar": "./img/map-sidebar.png"
+                }
+            ]
+        },
+        {
+            "thumbnailModel": "img/slider3.png",
+            "modelImg": "img/model3.png",
+            "accessory": [
+                {
+                    "accessoryImg": "img/giay.png",
+                    "productName": "giày",
+                    "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
+                    "productPrice": "5.000.000",
+                    "imgProduct": [
+                        "./img/vay1.png",
+                        "./img/vay2.png",
+                        "./img/vay3.png"
+                    ],
+                    "promotionDetail": "Using color to add meaning only provides a visual indication",
+                    "qrcodeImg": "./img/qrcode.png",
+                    "mapSidebar": "./img/map-sidebar.png"
+                }
+            ]
+        },
+        {
+            "thumbnailModel": "img/slider4.png",
+            "modelImg": "img/model4.png",
+            "accessory": [
+                {
+                    "accessoryImg": "img/giay.png",
+                    "productName": "giày",
                     "productDescription": "jsdfkjsdhfkjhdskfhsdkfhsdkfhksdfhkdsfhkdhfkjsdhfkhdfkjaskjfb",
                     "productPrice": "5.000.000",
                     "imgProduct": [
