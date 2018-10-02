@@ -15,6 +15,8 @@ $(document).ready(() => {
     var languageEN = $("#en"), languageVI = $("#vi");
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
+    var $colorBtn = $("#productColor .colorBtn");
+
     openNav = () => {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
@@ -101,7 +103,7 @@ $(document).ready(() => {
 
     //bắt sự kiện click outside popup (2 event phía dưới)
     $("#popup").click(() => {
-        console.log("#popup click"); 
+        console.log("#popup click");
         //tắt popup
         document.getElementById("popup").style.display = "none";
     })
@@ -131,6 +133,11 @@ $(document).ready(() => {
     });
     slideDown.click(() => {
         showColorItem();
+    });
+
+    //bắt sự kiện click các nút chuyển đổi màu sắc
+    $("button").click(() => {
+        alert($(this).index());
     });
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
@@ -168,16 +175,16 @@ $(document).ready(() => {
         function (data) {
             console.log(data);
             var thumbnailModel = data.models[0].thumbnailModel;
-            var modelImg       = data.models[0].modelImg;
-            var accessoryImg   = data.models[0].accessory[0].accessoryImg;
-            var productName    = data.models[0].accessory[0].productName;
+            var modelImg = data.models[0].modelImg;
+            var accessoryImg = data.models[0].accessory[0].accessoryImg;
+            var productName = data.models[0].accessory[0].productName;
             var productDescription = data.models[0].accessory[0].productDescription;
             var productPrice = data.models[0].accessory[0].productPrice;
             var str = '';
-            var i , y;
+            var i, y;
             var mapSidebar = data.models[0].accessory[0].mapSidebar;
-            var promotionDetail  = data.models[0].accessory[0].promotionDetail;
-            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;   
+            var promotionDetail = data.models[0].accessory[0].promotionDetail;
+            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
             // console.log(thumbnailModel);
             // console.log(modelImg );
             // console.log(accessoryImg);
@@ -191,20 +198,20 @@ $(document).ready(() => {
 
             languageEN.click(() => {
                 // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
-                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo +'</h5>');
-                $("#productName").replaceWith('<h3 id="productName">'+ productName + '</h3>');
+                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
                 $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
                 $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-                $("#promotion").replaceWith('<h5 id="promotion">'+ data.en.promotion + '</h5>');
+                $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
                 $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
                 $("#qrcodeImg").attr("src", qrcodeImg);
                 $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-                $("#map-sidebar").attr("src",mapSidebar);
-                for (i in data.models[0].accessory[0].imgProduct){
+                $("#map-sidebar").attr("src", mapSidebar);
+                for (i in data.models[0].accessory[0].imgProduct) {
                     var x = data.models[0].accessory[0].imgProduct[i];
                     var z = parseInt(i);
                     y = parseInt(z + 1);
-                    $("#choose" + y).attr("src",x);
+                    $("#choose" + y).attr("src", x);
                 }
             });
 
@@ -226,7 +233,7 @@ $(document).ready(() => {
     //             console.log(test);  
     //             $("#directionDetail").append(test);              
     //        });
-           
+
     //     }
     // });
 });
