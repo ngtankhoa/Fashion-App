@@ -175,12 +175,6 @@ $(document).ready(() => {
             var productPrice = data.models[0].accessory[0].productPrice;
             var str = '';
             var i , y;
-            for (i in data.models[0].accessory[0].imgProduct){
-                var x = data.models[0].accessory[0].imgProduct[i];
-                var z = parseInt(i);
-                y = parseInt(z + 1);
-                str = str +  '<img class="colorItemSlides mx-auto" src="' + x + '" alt="mau ao ' + parseInt(y) + '" id="choose'+ parseInt(y)  + '">' + '\n'
-            }
             var mapSidebar = data.models[0].accessory[0].mapSidebar;
             var promotionDetail  = data.models[0].accessory[0].promotionDetail;
             var qrcodeImg = data.models[0].accessory[0].qrcodeImg;   
@@ -203,9 +197,15 @@ $(document).ready(() => {
                 $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
                 $("#promotion").replaceWith('<h5 id="promotion">'+ data.en.promotion + '</h5>');
                 $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-                $("#qrcodeImg").replaceWith('<img id="qrcodeImg" src="' + qrcodeImg + '" alt="qrcode">');
+                $("#qrcodeImg").attr("src", qrcodeImg);
                 $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
                 $("#map-sidebar").attr("src",mapSidebar);
+                for (i in data.models[0].accessory[0].imgProduct){
+                    var x = data.models[0].accessory[0].imgProduct[i];
+                    var z = parseInt(i);
+                    y = parseInt(z + 1);
+                    $("#choose" + y).attr("src",x);
+                }
             });
 
             languageVI.click(() => {
