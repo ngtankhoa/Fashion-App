@@ -22,7 +22,7 @@
     "models": [
         {
             "thumbnailModel": "img/slider1.png",
-            "modelImg": "img/model.png",
+            "modelImg": "img/model1.png",
             "accessory": [
                 {
                     "accessoryImg": "img/giay.png",

@@ -181,7 +181,6 @@ $(document).ready(() => {
             var productDescription = data.models[0].accessory[0].productDescription;
             var productPrice = data.models[0].accessory[0].productPrice;
             var str = '';
-            var i, y;
             var mapSidebar = data.models[0].accessory[0].mapSidebar;
             var promotionDetail = data.models[0].accessory[0].promotionDetail;
             var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
@@ -206,13 +205,22 @@ $(document).ready(() => {
                 $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
                 $("#qrcodeImg").attr("src", qrcodeImg);
                 $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-                $("#map-sidebar").attr("src", mapSidebar);
-                for (i in data.models[0].accessory[0].imgProduct) {
+                $("#map-sidebar").attr("src",mapSidebar);
+                for (var i in data.models[0].accessory[0].imgProduct){
                     var x = data.models[0].accessory[0].imgProduct[i];
                     var z = parseInt(i);
-                    y = parseInt(z + 1);
-                    $("#choose" + y).attr("src", x);
+                    var y = parseInt(z + 1);
+                    $("#choose" + y).attr("src",x);
                 }
+                for (var i in data.models)
+                {
+                    var z = parseInt(i);
+                    var y = parseInt(z + 1);
+                    console.log(data.models[i].thumbnailModel);
+                    $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
+                    $("#modelImg" + y).attr("src", data.models[i].modelImg);
+                }
+
             });
 
             languageVI.click(() => {
