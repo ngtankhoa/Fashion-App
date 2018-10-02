@@ -210,8 +210,8 @@ $(document).ready(() => {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
                     console.log(data.models[i].thumbnailModel);
-                    $("#thumbnailModel" + z).attr("src", data.models[i].thumbnailModel);
-                    $("#modelImg" + z).attr("src", data.models[i].modelImg);
+                    $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
+                    $("#modelImg" + y).attr("src", data.models[i].modelImg);
                 }
 
             });
