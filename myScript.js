@@ -16,7 +16,7 @@ $(document).ready(() => {
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
     var $thumbnail = $("#thumbnail img");
-    //var $colorBtn = $(".colorBtn");
+    var $colorBtn = $("#productColor button");
     openNav = () => {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
@@ -185,7 +185,7 @@ $(document).ready(() => {
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
     //bắt sự kiện click các nút chuyển đổi màu sắc
-    $(".colorBtn").click(function () {
+    $colorBtn.click(function () {
         colorIndex = $(this).index() - 1;
         showColorItem();
     });
