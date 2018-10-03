@@ -125,10 +125,18 @@ $(document).ready(() => {
 
     //bắt sự kiện click scrollUp và scrollDown
     scrollUp.click(() => {
-        document.getElementById("thumbnail").scrollBy(0,30);
+        document.getElementById("thumbnail").scrollBy({
+            top: -100,
+            left: 0,
+            behavior: 'smooth'
+        });
     });
     scrollDown.click(() => {
-        document.getElementById("thumbnail").scrollBy(0,-30);
+        document.getElementById("thumbnail").scrollBy({
+            top: 100,
+            left: 0,
+            behavior: 'smooth'
+        });
     });
 
     //bắt sự kiện click slideUp và slideDown
