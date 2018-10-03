@@ -211,9 +211,6 @@ $(document).ready(() => {
     $.getJSON("img/data.json",
         function (data) {
             console.log(data);
-            var thumbnailModel = data.models[0].thumbnailModel;
-            var modelImg = data.models[0].modelImg;
-            var accessoryImg = data.models[0].accessory[0].accessoryImg;
             var productName = data.models[0].accessory[0].en.productName;
             var productDescription = data.models[0].accessory[0].en.productDescription;
             var productPrice = data.models[0].accessory[0].productPrice;
@@ -255,9 +252,15 @@ $(document).ready(() => {
                 for (var i in data.models) {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
-                    console.log(data.models[i].thumbnailModel);
+                   
                     $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
                     $("#modelImg" + y).attr("src", data.models[i].modelImg);
+                    for(var j in data.models){
+                        var u = parseInt(j);
+                        var k = parseInt(u + 1);
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg +'" alt="non" class="accessory" id="icon' + y +'-'+ k + '" id="accessoryImg">';
+                        $(".accessoryContainer" + y).append(test);
+                    }
                 }
                 
 

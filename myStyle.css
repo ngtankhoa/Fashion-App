@@ -182,27 +182,77 @@ body {
 }
 
 #icon1-2 {
-  top:15%;
-  left:10%;
-}
-
-#icon2-1 {
   top:20%;
   right: 10%;
 }
 
-#icon3-1 {
+#icon1-3 {
   top:50%;
   left:10%;
 }
 
-#icon3-2 {
+#icon1-4 {
+  top:60%;
+  left:10%;
+}
+
+#icon2-1 {
+  top:10%;
+  right: 10%;
+}
+
+#icon2-2 {
+  top:20%;
+  right: 10%;
+}
+
+#icon2-3 {
   top:50%;
-  right:10%;
+  left:10%;
+}
+
+#icon2-4 {
+  top:60%;
+  left:10%;
+}
+
+#icon3-1 {
+  top:10%;
+  right: 10%;
+}
+
+#icon3-2 {
+  top:20%;
+  right: 10%;
+}
+
+#icon3-3 {
+  top:50%;
+  left:10%;
+}
+
+#icon3-4 {
+  top:60%;
+  left:10%;
 }
 
 #icon4-1 {
+  top:10%;
+  right: 10%;
+}
+
+#icon4-2 {
+  top:20%;
+  right: 10%;
+}
+
+#icon4-3 {
   top:60%;
+  left:10%;
+}
+
+#icon4-4 {
+  top:30%;
   left:10%;
 }
 
