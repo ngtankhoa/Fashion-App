@@ -2,7 +2,6 @@
 $(document).ready(() => {
     //khai báo các biến ban đầu
     var $slides = $(".mySlides");
-    var slideshowContainer = $(".slideshow-container");
     var $colorItemSlides = $(".colorItemSlides");
     var slideIndex = 0, colorIndex = 0, timeoutSlider, timeoutSidenav;
     var timeoutPopup;
@@ -17,6 +16,7 @@ $(document).ready(() => {
     var qrPopup = $("#qrcodeImg");
     var $thumbnail = $("#thumbnail img");
     var $colorBtn = $("#productColor button");
+
     openNav = () => {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
@@ -142,7 +142,9 @@ $(document).ready(() => {
     });
 
     //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
-    $(".accessory").click(openNav);
+    //$accessory.click(openNav);
+    $(document.body).on("click", ".accessory", openNav);
+
     closeBtn.click(closeNav);
 
     //bắt sự kiện click scrollUp và scrollDown
@@ -245,25 +247,23 @@ $(document).ready(() => {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
                     // var test = '<button type="button" class="btn" style="padding : 1rem; margin-bottom: 0.5rem; background-color:' + data.models[0].accessory[0].productColor[i] + '"></button>';
-                    
+
                     $("#choose" + y).attr("src", x);
-                    $(".btn" + y).attr("style","background-color:" + data.models[0].accessory[0].productColor[i] );
+                    $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
                 }
                 for (var i in data.models) {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
-                   
+
                     $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
                     $("#modelImg" + y).attr("src", data.models[i].modelImg);
-                    for(var j in data.models){
+                    for (var j in data.models) {
                         var u = parseInt(j);
                         var k = parseInt(u + 1);
-                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg +'" alt="non" class="accessory" id="icon' + y +'-'+ k + '" id="accessoryImg">';
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="icon' + y + '-' + k + '" id="accessoryImg">';
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
-                
-
             });
 
             languageVI.click(() => {
@@ -287,6 +287,7 @@ $(document).ready(() => {
 
     //     }
     // });
+
 });
 
 
