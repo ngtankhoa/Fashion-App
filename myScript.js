@@ -15,7 +15,7 @@ $(document).ready(() => {
     var languageEN = $("#en"), languageVI = $("#vi");
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
-    var $colorBtn = $("#productColor .colorBtn");
+    var $colorBtn = $(".colorBtn");
 
     openNav = () => {
         sideNavOpen = 'true';
@@ -23,24 +23,25 @@ $(document).ready(() => {
         document.getElementById("mySidenav").style.width = "27%";
         document.getElementById("main").style.marginRight = "20vw";
         // timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
-    }
+    };
 
     closeNav = () => {
         sideNavOpen = 'false';
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginRight = "auto"; //chố này có vấn đề với transition
         resumeSlider();
-    }
+    };
+
     pauseSlider = () => {
         clearTimeout(timeoutSlider);
         console.log("pause slider");
-    }
+    };
 
     resumeSlider = () => {
         if (sideNavOpen === 'false')
             timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
         console.log("resume slider");
-    }
+    };
 
     showSlides = (n) => {
         slideIndex = n;
@@ -49,7 +50,7 @@ $(document).ready(() => {
         if (slideIndex < $slides.length - 1) { slideIndex++; } //độ dài của $slides là 4
         else { slideIndex = 0; }
         timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
-    }
+    };
 
     showColorItem = () => {
         if (colorIndex < $colorItemSlides.length - 1) { colorIndex++ }
@@ -58,7 +59,7 @@ $(document).ready(() => {
         $colorItemSlides.eq(colorIndex).css("display", "block");
         clearTimeout(timeoutSidenav);
         timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
-    }
+    };
 
     showColorItemReverse = () => {
         if (colorIndex < 0) { colorIndex = $colorItemSlides.length - 2; }
@@ -67,7 +68,7 @@ $(document).ready(() => {
         $colorItemSlides.eq(colorIndex).css("display", "block");
         clearTimeout(timeoutSidenav);
         timeoutSidenav = setTimeout(closeNav, pauseTimeSideNav);
-    }
+    };
 
     showMapPopup = () => {
         console.log("function show map popup");
@@ -77,7 +78,7 @@ $(document).ready(() => {
         timeoutPopup = setTimeout(() => {
             document.getElementById("popup").style.display = "none";
         }, popupTime);
-    }
+    };
 
     showQrPopup = () => {
         document.getElementById("popup").style.display = "block";
@@ -86,7 +87,7 @@ $(document).ready(() => {
         timeoutPopup = setTimeout(() => {
             document.getElementById("popup").style.display = "none";
         }, popupTime);
-    }
+    };
 
     //check tương tác màn hình
     //vì đây là desktop touch nên ta thay mouseenter và mouseleave bằng click của cả document
@@ -106,7 +107,7 @@ $(document).ready(() => {
         console.log("#popup click");
         //tắt popup
         document.getElementById("popup").style.display = "none";
-    })
+    });
 
     $("#imgPopup").click((event) => {
         console.log("imgpopup click");
@@ -115,7 +116,7 @@ $(document).ready(() => {
         timeoutPopup = setTimeout(() => {
             document.getElementById("popup").style.display = "none";
         }, popupTime);
-    })
+    });
 
     //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
     $(".accessory").click(openNav);
@@ -135,10 +136,7 @@ $(document).ready(() => {
         showColorItem();
     });
 
-    //bắt sự kiện click các nút chuyển đổi màu sắc
-    $("button").click(() => {
-        alert($(this).index());
-    });
+
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
     languageVI.click(() => {
@@ -152,6 +150,12 @@ $(document).ready(() => {
     //phần onload của slide màu sắc trang phục
     $colorItemSlides.css("display", "none");
     $colorItemSlides.eq(colorIndex).css("display", "block");
+
+    //bắt sự kiện click các nút chuyển đổi màu sắc
+    //var $colorBtn = $("#productColor .colorBtn");
+    $colorBtn.click(() => {
+        alert($(this).index());
+    });
 
     //mở popup
     mapPopup.click(() => {
@@ -205,15 +209,14 @@ $(document).ready(() => {
                 $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
                 $("#qrcodeImg").attr("src", qrcodeImg);
                 $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-                $("#map-sidebar").attr("src",mapSidebar);
-                for (var i in data.models[0].accessory[0].imgProduct){
+                $("#map-sidebar").attr("src", mapSidebar);
+                for (var i in data.models[0].accessory[0].imgProduct) {
                     var x = data.models[0].accessory[0].imgProduct[i];
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
-                    $("#choose" + y).attr("src",x);
+                    $("#choose" + y).attr("src", x);
                 }
-                for (var i in data.models)
-                {
+                for (var i in data.models) {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
                     console.log(data.models[i].thumbnailModel);
