@@ -15,8 +15,8 @@ $(document).ready(() => {
     var languageEN = $("#en"), languageVI = $("#vi");
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
+    var $thumbnail = $("#thumbnail img");
     //var $colorBtn = $(".colorBtn");
-
     openNav = () => {
         sideNavOpen = 'true';
         clearTimeout(timeoutSidenav);
@@ -47,10 +47,26 @@ $(document).ready(() => {
         slideIndex = n;
         $slides.css("display", "none");
         $slides.eq(slideIndex).css("display", "block");
+        $thumbnail.css({
+            "border": "none",
+            "transition": "0.2s"
+        });
+        $thumbnail.eq(slideIndex).css({
+            "border": "2px solid red",
+            "border-radius": "5px",
+            "transition": "0.3s"
+        });
+        $thumbnail[slideIndex].scrollIntoView({
+            behavior: "smooth",
+        });
         if (slideIndex < $slides.length - 1) { slideIndex++; } //độ dài của $slides là 4
         else { slideIndex = 0; }
         timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
     };
+
+    thumbnailShowSlide = (n) => {
+
+    }
 
     showColorItem = () => {
         if (colorIndex < $colorItemSlides.length - 1) { colorIndex++ }
@@ -100,6 +116,13 @@ $(document).ready(() => {
             timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
             console.log("set timeoutSlider");
         }
+    });
+
+    //bắt sự kiện click thumbnail trả ra showSlides
+    $thumbnail.click(function () {
+        slideIndex = $(this).index();
+        clearTimeout(timeoutSlider);
+        showSlides(slideIndex);
     });
 
     //bắt sự kiện click outside popup (2 event phía dưới)
@@ -162,10 +185,10 @@ $(document).ready(() => {
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
     //bắt sự kiện click các nút chuyển đổi màu sắc
-    $(".colorBtn").click((e) => {
-        //alert($(this).index());
-        console.log(e.target);
-    });
+    // $(".colorBtn").click((e) => {
+    //     //alert($(this).index());
+    //     console.log(e.target);
+    // });
 
     //mở popup
     mapPopup.click(() => {
@@ -260,13 +283,9 @@ $(document).ready(() => {
 });
 
 
-// $(document).ready(() => {
-//     $(".colorBtn").click(() => {
-//         alert($(this).index());
-//     });
-// });
 //làm animation cho slide
 //viết lại function cho thumbnail slider
+
 
 //nạp json chuyển đổi ngôn ngữ
 //dùng hàm lấy dữ liệu từ file local
