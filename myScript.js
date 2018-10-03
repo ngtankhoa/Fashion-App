@@ -9,13 +9,14 @@ $(document).ready(() => {
     var sideNavOpen = 'false';
     var sliderPauseTime = 3000, pauseTimeSideNav = 10000, popupTime = 3000;
     var closeBtn = $(".closebtn");
-    var scrollUp = $(".arrowup"), scrollDown = $(".arrowDown");
+    var scrollUp = $("#arrowUp"), scrollDown = $("#arrowDown");
     var slideUp = $("#slideUp"), slideDown = $("#slideDown");
     var mapPopup = $("#map-sidebar");
     var languageEN = $("#en"), languageVI = $("#vi");
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
     var $colorBtn = $(".colorBtn");
+    // var scrollIndex;
 
     openNav = () => {
         sideNavOpen = 'true';
@@ -124,8 +125,10 @@ $(document).ready(() => {
 
     //bắt sự kiện click scrollUp và scrollDown
     scrollUp.click(() => {
+        document.getElementById("thumbnail").scrollBy(0,30);
     });
     scrollDown.click(() => {
+        document.getElementById("thumbnail").scrollBy(0,-30);
     });
 
     //bắt sự kiện click slideUp và slideDown
