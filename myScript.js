@@ -185,10 +185,10 @@ $(document).ready(() => {
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
     //bắt sự kiện click các nút chuyển đổi màu sắc
-    // $(".colorBtn").click((e) => {
-    //     //alert($(this).index());
-    //     console.log(e.target);
-    // });
+    $(".colorBtn").click(function () {
+        colorIndex = $(this).index() - 1;
+        showColorItem();
+    });
 
     //mở popup
     mapPopup.click(() => {
