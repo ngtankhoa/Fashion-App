@@ -15,8 +15,7 @@ $(document).ready(() => {
     var languageEN = $("#en"), languageVI = $("#vi");
     var closePopup = $("#closePopup");
     var qrPopup = $("#qrcodeImg");
-    var $colorBtn = $(".colorBtn");
-    // var scrollIndex;
+    //var $colorBtn = $(".colorBtn");
 
     openNav = () => {
         sideNavOpen = 'true';
@@ -163,9 +162,9 @@ $(document).ready(() => {
     $colorItemSlides.eq(colorIndex).css("display", "block");
 
     //bắt sự kiện click các nút chuyển đổi màu sắc
-    //var $colorBtn = $("#productColor .colorBtn");
-    $colorBtn.click(() => {
-        alert($(this).index());
+    $(".colorBtn").click((e) => {
+        //alert($(this).index());
+        console.log(e.target);
     });
 
     //mở popup
@@ -261,6 +260,11 @@ $(document).ready(() => {
 });
 
 
+// $(document).ready(() => {
+//     $(".colorBtn").click(() => {
+//         alert($(this).index());
+//     });
+// });
 //làm animation cho slide
 //viết lại function cho thumbnail slider
 
