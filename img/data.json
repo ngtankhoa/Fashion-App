@@ -39,12 +39,12 @@
                     "mapSidebar": "./img/map-sidebar.png"
                 },
                 {
-                    "accessoryImg": "img/giay.png",
-                    "productName": "váy",
+                    "accessoryImg": "img/tuixach.png",
+                    "productName": "Túi xách",
                     "productDescription": "product description của item 2 trên slide 1",
                     "productPrice": "2.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/tuixach.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
