@@ -31,6 +31,11 @@
                         "./img/vay1.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
+                    ],
+                    "productColor" : [
+                        "red",
+                        "blue",
+                        "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
@@ -54,6 +59,11 @@
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
+                    "productColor" : [
+                        "red",
+                        "blue",
+                        "green"
+                    ],   
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -82,6 +92,11 @@
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
+                    "productColor" : [
+                        "red",
+                        "blue",
+                        "green"
+                    ],   
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -110,6 +125,11 @@
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
+                    "productColor" : [
+                        "red",
+                        "blue",
+                        "green"
+                    ],   
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }
@@ -138,6 +158,11 @@
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
+                    "productColor" : [
+                        "red",
+                        "blue",
+                        "green"
+                    ],   
                     "qrcodeImg": "./img/qrcode.png",
                     "mapSidebar": "./img/map-sidebar.png"
                 }

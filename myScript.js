@@ -247,7 +247,10 @@ $(document).ready(() => {
                     var x = data.models[0].accessory[0].imgProduct[i];
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
+                    // var test = '<button type="button" class="btn" style="padding : 1rem; margin-bottom: 0.5rem; background-color:' + data.models[0].accessory[0].productColor[i] + '"></button>';
+                    
                     $("#choose" + y).attr("src", x);
+                    $(".btn" + y).attr("style","background-color:" + data.models[0].accessory[0].productColor[i] );
                 }
                 for (var i in data.models) {
                     var z = parseInt(i);
@@ -256,6 +259,7 @@ $(document).ready(() => {
                     $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
                     $("#modelImg" + y).attr("src", data.models[i].modelImg);
                 }
+                
 
             });
 
