@@ -214,12 +214,12 @@ $(document).ready(() => {
             var thumbnailModel = data.models[0].thumbnailModel;
             var modelImg = data.models[0].modelImg;
             var accessoryImg = data.models[0].accessory[0].accessoryImg;
-            var productName = data.models[0].accessory[0].productName;
-            var productDescription = data.models[0].accessory[0].productDescription;
+            var productName = data.models[0].accessory[0].en.productName;
+            var productDescription = data.models[0].accessory[0].en.productDescription;
             var productPrice = data.models[0].accessory[0].productPrice;
             var str = '';
             var mapSidebar = data.models[0].accessory[0].mapSidebar;
-            var promotionDetail = data.models[0].accessory[0].promotionDetail;
+            var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
             var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
             // console.log(thumbnailModel);
             // console.log(modelImg );
@@ -231,7 +231,7 @@ $(document).ready(() => {
             // console.log(mapSidebar);
             // console.log(promotionDetail);
             // console.log(qrcodeImg);
-
+            console.log(data);
             languageEN.click(() => {
                 // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
                 $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
