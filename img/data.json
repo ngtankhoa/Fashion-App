@@ -17,18 +17,18 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Shoes",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Gìay",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/giay.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -43,18 +43,18 @@
                 {
                     "accessoryImg": "img/non.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Hat",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Non",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/non.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -96,12 +96,12 @@
                     "accessoryImg": "img/tuixach.png",
                     "productName": "Túi xách",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Bag",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Túi xách",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },           
@@ -128,18 +128,18 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Shoes",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Gìay",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/giay.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -154,18 +154,18 @@
                 {
                     "accessoryImg": "img/non.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Hat",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Nón",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/non.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -207,12 +207,12 @@
                     "accessoryImg": "img/tuixach.png",
                     "productName": "Túi xách",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Bag",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Túi xách",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },           
@@ -239,18 +239,18 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Shoes",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Gìay",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/giay.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -265,18 +265,18 @@
                 {
                     "accessoryImg": "img/non.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Hat",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Nón",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/non.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -318,12 +318,12 @@
                     "accessoryImg": "img/tuixach.png",
                     "productName": "Túi xách",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Bag",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Túi xách",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },           
@@ -350,7 +350,7 @@
                 {
                     "accessoryImg": "img/giay.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Shoes",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
@@ -361,7 +361,7 @@
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/giay.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -376,18 +376,18 @@
                 {
                     "accessoryImg": "img/non.png",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Hat",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Nón",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
                     "productPrice": "1.000.000",
                     "imgProduct": [
-                        "./img/vay1.png",
+                        "./img/non.png",
                         "./img/vay2.png",
                         "./img/vay3.png"
                     ],
@@ -429,12 +429,12 @@
                     "accessoryImg": "img/tuixach.png",
                     "productName": "Túi xách",
                     "en": {
-                        "productName": "Dress",
+                        "productName": "Bag",
                         "productDescription": "En product description",
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Váy",
+                        "productName": "Túi xách",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },           

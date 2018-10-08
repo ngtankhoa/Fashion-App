@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
     //khai báo các biến ban đầu
     var $slides = $(".mySlides");
@@ -16,6 +15,50 @@ $(document).ready(() => {
     var qrPopup = $("#qrcodeImg");
     var $thumbnail = $("#thumbnail img");
     var $colorBtn = $("#productColor button");
+
+    //Load dữ liệu
+    $.getJSON("img/data.json",
+    function (data) {
+                var productName = data.models[0].accessory[0].en.productName;
+                var productDescription = data.models[0].accessory[0].en.productDescription;
+                var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
+                var productPrice = data.models[0].accessory[0].productPrice;
+                var mapSidebar = data.models[0].accessory[0].mapSidebar;
+                var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
+                // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
+                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+                $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
+                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                $("#qrcodeImg").attr("src", qrcodeImg);
+                $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+                $("#map-sidebar").attr("src", mapSidebar);
+                for (var i in data.models[0].accessory[0].imgProduct) {
+                    var x = data.models[0].accessory[0].imgProduct[i];
+                    var z = parseInt(i);
+                    var y = parseInt(z + 1);
+                    // var test = '<button type="button" class="btn" style="padding : 1rem; margin-bottom: 0.5rem; background-color:' + data.models[0].accessory[0].productColor[i] + '"></button>';
+
+                    $("#choose" + y).attr("src", x);
+                    $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
+                }
+                for (var i in data.models) {
+                    var z = parseInt(i);
+                    var y = parseInt(z + 1);
+
+                    $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
+                    $("#modelImg" + y).attr("src", data.models[i].modelImg);
+                    for (var j in data.models) {
+                        var u = parseInt(j);
+                        var k = parseInt(u + 1);
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="icon' + y + '-' + k + '" id="accessoryImg">';
+                        $(".accessoryContainer" + y).append(test);
+                    }
+                }
+    });
+
 
     openNav = () => {
         sideNavOpen = 'true';
@@ -143,7 +186,10 @@ $(document).ready(() => {
 
     //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
     //$accessory.click(openNav);
-    $(document.body).on("click", ".accessory", openNav);
+    $(document.body).on("click", ".accessory",  () => {
+        openNav();
+       console.log(document.getElementById("accessoryImg").values);
+    });
 
     closeBtn.click(closeNav);
 
@@ -213,25 +259,13 @@ $(document).ready(() => {
     $.getJSON("img/data.json",
         function (data) {
             console.log(data);
-            var productName = data.models[0].accessory[0].en.productName;
-            var productDescription = data.models[0].accessory[0].en.productDescription;
-            var productPrice = data.models[0].accessory[0].productPrice;
-            var str = '';
-            var mapSidebar = data.models[0].accessory[0].mapSidebar;
-            var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
-            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
-            // console.log(thumbnailModel);
-            // console.log(modelImg );
-            // console.log(accessoryImg);
-            // console.log(productName);
-            // console.log(productDescription);
-            // console.log(productPrice);
-            // console.log(str);
-            // console.log(mapSidebar);
-            // console.log(promotionDetail);
-            // console.log(qrcodeImg);
-            console.log(data);
             languageEN.click(() => {
+                var productName = data.models[0].accessory[0].en.productName;
+                var productDescription = data.models[0].accessory[0].en.productDescription;
+                var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
+                var productPrice = data.models[0].accessory[0].productPrice;
+                var mapSidebar = data.models[0].accessory[0].mapSidebar;
+                var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
                 // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
                 $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
                 $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
@@ -246,8 +280,6 @@ $(document).ready(() => {
                     var x = data.models[0].accessory[0].imgProduct[i];
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
-                    // var test = '<button type="button" class="btn" style="padding : 1rem; margin-bottom: 0.5rem; background-color:' + data.models[0].accessory[0].productColor[i] + '"></button>';
-
                     $("#choose" + y).attr("src", x);
                     $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
                 }
@@ -267,6 +299,15 @@ $(document).ready(() => {
             });
 
             languageVI.click(() => {
+                var productName = data.models[0].accessory[0].vi.productName;
+                var productDescription = data.models[0].accessory[0].vi.productDescription;
+                var promotionDetail = data.models[0].accessory[0].vi.promotionDetail;
+                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.vi.productInfo + '</h5>');
+                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                $("#promotion").replaceWith('<h5 id="promotion">' + data.vi.promotion + '</h5>');
+                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                $("#direction").replaceWith('<h5 id="direction">' + data.vi.direction + '</h5>');
                 $colorItemSlides.css("display", "none");
                 $colorItemSlides.eq(colorIndex).css("display", "block");
             });
@@ -289,6 +330,7 @@ $(document).ready(() => {
     // });
 
 });
+
 
 
 //làm animation cho slide
