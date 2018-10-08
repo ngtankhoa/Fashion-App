@@ -53,7 +53,8 @@ $(document).ready(() => {
                     for (var j in data.models) {
                         var u = parseInt(j);
                         var k = parseInt(u + 1);
-                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="icon' + y + '-' + k + '" id="accessoryImg">';
+                        var location = data.models[i].accessory[j].location;
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" id="accessoryImg">';
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
@@ -292,7 +293,8 @@ $(document).ready(() => {
                     for (var j in data.models) {
                         var u = parseInt(j);
                         var k = parseInt(u + 1);
-                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="icon' + y + '-' + k + '" id="accessoryImg">';
+                        var location = data.models[i].accessory[j].location;
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" id="accessoryImg">';
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
