@@ -38,7 +38,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-6"
                 },
                 {
                     "accessoryImg": "img/non.png",
@@ -64,7 +65,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-1"
                 },
                 {
                     "accessoryImg": "img/ao.png",
@@ -90,7 +92,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-2"
                 },
                 {
                     "accessoryImg": "img/tuixach.png",
@@ -117,7 +120,8 @@
                         "green"
                     ],   
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-3"
                 }
             ]
         },
@@ -149,7 +153,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-4"
                 },
                 {
                     "accessoryImg": "img/non.png",
@@ -175,7 +180,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-5"
                 },
                 {
                     "accessoryImg": "img/ao.png",
@@ -201,7 +207,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-1"
                 },
                 {
                     "accessoryImg": "img/tuixach.png",
@@ -228,7 +235,8 @@
                         "green"
                     ],   
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-2"
                 }
             ]
         },
@@ -260,7 +268,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-1"
                 },
                 {
                     "accessoryImg": "img/non.png",
@@ -286,7 +295,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-6"
                 },
                 {
                     "accessoryImg": "img/ao.png",
@@ -312,7 +322,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-5"
                 },
                 {
                     "accessoryImg": "img/tuixach.png",
@@ -339,7 +350,8 @@
                         "green"
                     ],   
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-4"
                 }
             ]
         },
@@ -371,7 +383,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-3"
                 },
                 {
                     "accessoryImg": "img/non.png",
@@ -397,7 +410,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-2"
                 },
                 {
                     "accessoryImg": "img/ao.png",
@@ -423,7 +437,8 @@
                         "green"
                     ],                  
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-1"
                 },
                 {
                     "accessoryImg": "img/tuixach.png",
@@ -450,7 +465,8 @@
                         "green"
                     ],   
                     "qrcodeImg": "./img/qrcode.png",
-                    "mapSidebar": "./img/map-sidebar.png"
+                    "mapSidebar": "./img/map-sidebar.png",
+                    "location" : "icon-6"
                 }
             ]
         }
