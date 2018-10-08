@@ -15,54 +15,56 @@ $(document).ready(() => {
     var qrPopup = $("#qrcodeImg");
     var $thumbnail = $("#thumbnail img");
     var $colorBtn = $("#productColor button");
-
+    var data;
     //Load dữ liệu
     $.getJSON("img/data.json",
-    function (data) {
-                var productName = data.models[0].accessory[0].en.productName;
-                var productDescription = data.models[0].accessory[0].en.productDescription;
-                var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
-                var productPrice = data.models[0].accessory[0].productPrice;
-                var mapSidebar = data.models[0].accessory[0].mapSidebar;
-                var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
-                // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
-                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
-                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-                $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-                $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
-                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-                $("#qrcodeImg").attr("src", qrcodeImg);
-                $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-                $("#map-sidebar").attr("src", mapSidebar);
-                //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
-                //$accessory.click(openNav);
-                $(document.body).on("click", ".accessory", function () {
-                    openNav();
-                    console.log("test");
-                    var index = $(this).index();
-                    for (var i in data.models[0].accessory[index].imgProduct) {
-                        var x = data.models[0].accessory[index].imgProduct[i];
-                        var z = parseInt(i);
-                        var y = parseInt(z + 1);
-                        $("#choose" + y).attr("src", x);
-                        $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
-                    }
-                });
-                for (var i in data.models) {
+        function (dataJson) {
+            data = dataJson;
+            var productName = data.models[0].accessory[0].en.productName;
+            var productDescription = data.models[0].accessory[0].en.productDescription;
+            var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
+            var productPrice = data.models[0].accessory[0].productPrice;
+            var mapSidebar = data.models[0].accessory[0].mapSidebar;
+            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
+            // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
+            $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+            $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+            $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+            $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+            $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
+            $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+            $("#qrcodeImg").attr("src", qrcodeImg);
+            $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+            $("#map-sidebar").attr("src", mapSidebar);
+            //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
+            //$accessory.click(openNav);
+            $(document.body).on("click", ".accessory", function () {
+                openNav();
+                console.log("test");
+                var index = $(this).index();
+                for (var i in data.models[0].accessory[index].imgProduct) {
+                    var x = data.models[0].accessory[index].imgProduct[i];
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
-
-                    $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
-                    $("#modelImg" + y).attr("src", data.models[i].modelImg);
-                    for (var j in data.models) {
-                        var location = data.models[i].accessory[j].location;
-                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" >';
-                        $(".accessoryContainer" + y).append(test);
-                    }
+                    $("#choose" + y).attr("src", x);
+                    $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
                 }
-            
+            });
+            for (var i in data.models) {
+                var z = parseInt(i);
+                var y = parseInt(z + 1);
+
+                $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
+                $("#modelImg" + y).attr("src", data.models[i].modelImg);
+                for (var j in data.models) {
+                    var location = data.models[i].accessory[j].location;
+                    var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" >';
+                    $(".accessoryContainer" + y).append(test);
+                }
+            }
+
         });
+
 
 
     openNav = () => {
@@ -185,7 +187,7 @@ $(document).ready(() => {
         }, popupTime);
     });
 
-    
+
 
     closeBtn.click(closeNav);
 
@@ -251,39 +253,32 @@ $(document).ready(() => {
         showQrPopup();
     });
 
-    // test load json
-    $.getJSON("img/data.json",
-        function (data) {
-            console.log(data);
-            languageEN.click(() => {
-                var productName = data.models[0].accessory[0].en.productName;
-                var productDescription = data.models[0].accessory[0].en.productDescription;
-                var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
-                var productPrice = data.models[0].accessory[0].productPrice;
-                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
-                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-                $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-                $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
-                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-                $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-            });
+    languageEN.click(() => {
+        var productName = data.models[0].accessory[0].en.productName;
+        var productDescription = data.models[0].accessory[0].en.productDescription;
+        var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
+        var productPrice = data.models[0].accessory[0].productPrice;
+        $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+        $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+        $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+        $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+        $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
+        $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+        $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+    });
 
-            languageVI.click(() => {
-                var productName = data.models[0].accessory[0].vi.productName;
-                var productDescription = data.models[0].accessory[0].vi.productDescription;
-                var promotionDetail = data.models[0].accessory[0].vi.promotionDetail;
-                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.vi.productInfo + '</h5>');
-                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-                $("#promotion").replaceWith('<h5 id="promotion">' + data.vi.promotion + '</h5>');
-                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-                $("#direction").replaceWith('<h5 id="direction">' + data.vi.direction + '</h5>');
-                $colorItemSlides.css("display", "none");
-                $colorItemSlides.eq(colorIndex).css("display", "block");
-            });
-        }
-    );
+    languageVI.click(() => {
+        var productName = data.models[0].accessory[0].vi.productName;
+        var productDescription = data.models[0].accessory[0].vi.productDescription;
+        var promotionDetail = data.models[0].accessory[0].vi.promotionDetail;
+        $("#productInfo").replaceWith('<h5 id="productInfo">' + data.vi.productInfo + '</h5>');
+        $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+        $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+        $("#promotion").replaceWith('<h5 id="promotion">' + data.vi.promotion + '</h5>');
+        $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+        $("#direction").replaceWith('<h5 id="direction">' + data.vi.direction + '</h5>');
+    });
+});
 
     // //test read json data 2
     // $.ajax({
@@ -300,7 +295,7 @@ $(document).ready(() => {
     //     }
     // });
 
-});
+// });
 
 
 
