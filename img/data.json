@@ -6,7 +6,7 @@
     },
     "vi": {
         "productInfo": "THÔNG TIN SẢN PHẨM",
-        "productImg": "URL hình ảnh sản phẩm",       
+        "promotion": "KHUYẾN MÃI",
         "direction": "CHỈ ĐƯỜNG"
     },
     "models": [
@@ -22,7 +22,7 @@
                         "promotionDetail": "this is the detail for promotion"
                     },
                     "vi" : {
-                        "productName": "Gìay",
+                        "productName": "Giày",
                         "productDescription": "Mô tả sản phâm tiếng việt",
                         "promotionDetail": "Đây là promotionDetail của item trên slide 1"
                     },                  
