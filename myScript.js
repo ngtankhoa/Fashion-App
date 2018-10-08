@@ -61,7 +61,7 @@ $(document).ready(() => {
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
-            }
+            
         });
 
 
