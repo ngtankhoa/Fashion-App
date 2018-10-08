@@ -176,84 +176,48 @@ body {
 
 /* position icon on each slides */
 /* just for testing */
-#icon1-1 {
-  top:10%;
-  right: 10%;
+#icon-1 {
+  top: -3%;
+  /* right: 10%; */
+  left: 21%;
 }
 
-#icon1-2 {
-  top:50%;
-  right: 10%;
+#icon-2 {
+  top: -1%;
+  /* right: 10%; */
+  left: 66%;
 }
 
-#icon1-3 {
-  top:10%;
-  left:10%;
-}
-
-#icon1-4 {
-  top:50%;
-  left:10%;
-}
-
-#icon2-1 {
-  top:10%;
-  right: 10%;
-}
-
-#icon2-2 {
-  top:50%;
-  right: 10%;
-}
-
-#icon2-3 {
+#icon-3 {
   top:10%;
   left:10%;
 }
 
-#icon2-4 {
+#icon-4 {
   top:50%;
   left:10%;
 }
 
-#icon3-1 {
+#icon-5 {
   top:10%;
   right: 10%;
 }
 
-#icon3-2 {
+#icon-6 {
   top:50%;
   right: 10%;
 }
 
-#icon3-3 {
-  top:10%;
-  left:10%;
+#icon-7 {
+  /* top:10%; */
+  left: 22%;
+  bottom: 8%;
 }
 
-#icon3-4 {
-  top:50%;
-  left:10%;
-}
-
-#icon4-1 {
-  top:10%;
-  right: 10%;
-}
-
-#icon4-2 {
-  top:50%;
-  right: 10%;
-}
-
-#icon4-3 {
-  top:10%;
-  left:10%;
-}
-
-#icon4-4 {
-  top:50%;
-  left:10%;
+#icon-8 {
+  /* top:50%; */
+  left: 72%;
+  bottom: 5%;
 }
 
 
