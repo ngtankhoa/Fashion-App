@@ -61,7 +61,8 @@ $(document).ready(() => {
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
-    });
+            }
+        });
 
 
     openNav = () => {
@@ -110,10 +111,6 @@ $(document).ready(() => {
         else { slideIndex = 0; }
         timeoutSlider = setTimeout(showSlides, sliderPauseTime, slideIndex);
     };
-
-    thumbnailShowSlide = (n) => {
-
-    }
 
     showColorItem = () => {
         if (colorIndex < $colorItemSlides.length - 1) { colorIndex++ }
@@ -166,7 +163,7 @@ $(document).ready(() => {
     });
 
     //bắt sự kiện click thumbnail trả ra showSlides
-    $thumbnail.click(function () {
+    $thumbnail.on("click", function () {
         slideIndex = $(this).index();
         clearTimeout(timeoutSlider);
         showSlides(slideIndex);
@@ -219,10 +216,10 @@ $(document).ready(() => {
 
 
     //bắt sự kiện nút chuyển đổi ngôn ngữ
-    languageVI.click(() => {
-    });
-    languageEN.click(() => {
-    });
+    // languageVI.click(() => {
+    // });
+    // languageEN.click(() => {
+    // });
 
     //chạy slide - khởi nguyên của mọi thứ bắt đầu từ đây
     showSlides(0);
