@@ -35,15 +35,20 @@ $(document).ready(() => {
                 $("#qrcodeImg").attr("src", qrcodeImg);
                 $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
                 $("#map-sidebar").attr("src", mapSidebar);
-                for (var i in data.models[0].accessory[0].imgProduct) {
-                    var x = data.models[0].accessory[0].imgProduct[i];
-                    var z = parseInt(i);
-                    var y = parseInt(z + 1);
-                    // var test = '<button type="button" class="btn" style="padding : 1rem; margin-bottom: 0.5rem; background-color:' + data.models[0].accessory[0].productColor[i] + '"></button>';
-
-                    $("#choose" + y).attr("src", x);
-                    $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
-                }
+                //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
+                //$accessory.click(openNav);
+                $(document.body).on("click", ".accessory", function () {
+                    openNav();
+                    console.log("test");
+                    var index = $(this).index();
+                    for (var i in data.models[0].accessory[index].imgProduct) {
+                        var x = data.models[0].accessory[index].imgProduct[i];
+                        var z = parseInt(i);
+                        var y = parseInt(z + 1);
+                        $("#choose" + y).attr("src", x);
+                        $(".btn" + y).attr("style", "background-color:" + data.models[0].accessory[0].productColor[i]);
+                    }
+                });
                 for (var i in data.models) {
                     var z = parseInt(i);
                     var y = parseInt(z + 1);
@@ -51,10 +56,8 @@ $(document).ready(() => {
                     $("#thumbnailModel" + y).attr("src", data.models[i].thumbnailModel);
                     $("#modelImg" + y).attr("src", data.models[i].modelImg);
                     for (var j in data.models) {
-                        var u = parseInt(j);
-                        var k = parseInt(u + 1);
                         var location = data.models[i].accessory[j].location;
-                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" id="accessoryImg">';
+                        var test = '<img src="' + data.models[i].accessory[j].accessoryImg + '" alt="non" class="accessory" id="' + location + '" >';
                         $(".accessoryContainer" + y).append(test);
                     }
                 }
@@ -185,12 +188,7 @@ $(document).ready(() => {
         }, popupTime);
     });
 
-    //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
-    //$accessory.click(openNav);
-    $(document.body).on("click", ".accessory",  () => {
-        openNav();
-       console.log(document.getElementById("accessoryImg"));
-    });
+    
 
     closeBtn.click(closeNav);
 
@@ -265,8 +263,6 @@ $(document).ready(() => {
                 var productDescription = data.models[0].accessory[0].en.productDescription;
                 var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
                 var productPrice = data.models[0].accessory[0].productPrice;
-                var mapSidebar = data.models[0].accessory[0].mapSidebar;
-                var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
                 $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
                 $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
                 $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
