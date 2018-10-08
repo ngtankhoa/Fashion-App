@@ -20,28 +20,27 @@ $(document).ready(() => {
     $.getJSON("img/data.json",
         function (dataJson) {
             data = dataJson;
-            var productName = data.models[0].accessory[0].en.productName;
-            var productDescription = data.models[0].accessory[0].en.productDescription;
-            var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
-            var productPrice = data.models[0].accessory[0].productPrice;
-            var mapSidebar = data.models[0].accessory[0].mapSidebar;
-            var qrcodeImg = data.models[0].accessory[0].qrcodeImg;
-            // $(".colorItemContainer").replaceWith('<div class="colorItemContainer">' + str + '</div>');
-            $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
-            $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-            $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-            $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-            $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
-            $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-            $("#qrcodeImg").attr("src", qrcodeImg);
-            $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-            $("#map-sidebar").attr("src", mapSidebar);
             //tạm thời cho tất cả icon cùng bắt 1 sự kiện openNav()
             //$accessory.click(openNav);
             $(document.body).on("click", ".accessory", function () {
                 openNav();
                 console.log("test");
                 var index = $(this).index();
+                var productName = data.models[0].accessory[index].en.productName;
+                var productDescription = data.models[0].accessory[index].en.productDescription;
+                var promotionDetail = data.models[0].accessory[index].en.promotionDetail;
+                var productPrice = data.models[0].accessory[index].productPrice;
+                var mapSidebar = data.models[0].accessory[index].mapSidebar;
+                var qrcodeImg = data.models[0].accessory[index].qrcodeImg;
+                $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+                $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+                $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+                $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
+                $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                $("#qrcodeImg").attr("src", qrcodeImg);
+                $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+                $("#map-sidebar").attr("src", mapSidebar);
                 for (var i in data.models[0].accessory[index].imgProduct) {
                     var x = data.models[0].accessory[index].imgProduct[i];
                     var z = parseInt(i);
