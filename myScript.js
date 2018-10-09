@@ -26,6 +26,31 @@ $(document).ready(() => {
                 openNav();
                 console.log("test");
                 var index = $(this).index();
+                languageEN.click(() => {
+                    var productName = data.models[0].accessory[index].en.productName;
+                    var productDescription = data.models[0].accessory[index].en.productDescription;
+                    var promotionDetail = data.models[0].accessory[index].en.promotionDetail;
+                    var productPrice = data.models[0].accessory[index].productPrice;
+                    $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
+                    $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+                    $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                    $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
+                    $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
+                    $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                    $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
+                });
+            
+                languageVI.click(() => {
+                    var productName = data.models[0].accessory[index].vi.productName;
+                    var productDescription = data.models[0].accessory[index].vi.productDescription;
+                    var promotionDetail = data.models[0].accessory[index].vi.promotionDetail;
+                    $("#productInfo").replaceWith('<h5 id="productInfo">' + data.vi.productInfo + '</h5>');
+                    $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
+                    $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
+                    $("#promotion").replaceWith('<h5 id="promotion">' + data.vi.promotion + '</h5>');
+                    $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
+                    $("#direction").replaceWith('<h5 id="direction">' + data.vi.direction + '</h5>');
+                });
                 var productName = data.models[0].accessory[index].en.productName;
                 var productDescription = data.models[0].accessory[index].en.productDescription;
                 var promotionDetail = data.models[0].accessory[index].en.promotionDetail;
@@ -252,31 +277,7 @@ $(document).ready(() => {
         showQrPopup();
     });
 
-    languageEN.click(() => {
-        var productName = data.models[0].accessory[0].en.productName;
-        var productDescription = data.models[0].accessory[0].en.productDescription;
-        var promotionDetail = data.models[0].accessory[0].en.promotionDetail;
-        var productPrice = data.models[0].accessory[0].productPrice;
-        $("#productInfo").replaceWith('<h5 id="productInfo">' + data.en.productInfo + '</h5>');
-        $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-        $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-        $("#productPrice").replaceWith('<div id="productPrice">' + productPrice + '</div>');
-        $("#promotion").replaceWith('<h5 id="promotion">' + data.en.promotion + '</h5>');
-        $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-        $("#direction").replaceWith('<h5 id="direction">' + data.en.direction + '</h5>');
-    });
-
-    languageVI.click(() => {
-        var productName = data.models[0].accessory[0].vi.productName;
-        var productDescription = data.models[0].accessory[0].vi.productDescription;
-        var promotionDetail = data.models[0].accessory[0].vi.promotionDetail;
-        $("#productInfo").replaceWith('<h5 id="productInfo">' + data.vi.productInfo + '</h5>');
-        $("#productName").replaceWith('<h3 id="productName">' + productName + '</h3>');
-        $("#productDescription").replaceWith('<div id="productDescription">' + productDescription + '</div>');
-        $("#promotion").replaceWith('<h5 id="promotion">' + data.vi.promotion + '</h5>');
-        $("#promotionDetail").replaceWith('<div id="promotionDetail" class="col-8">' + promotionDetail + '</div>');
-        $("#direction").replaceWith('<h5 id="direction">' + data.vi.direction + '</h5>');
-    });
+   
 });
 
     // //test read json data 2
